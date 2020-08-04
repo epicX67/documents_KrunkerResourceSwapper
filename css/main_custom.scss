@@ -1,0 +1,989 @@
+//Written by epicX67
+//If you like my work, support me :)
+//paypal.me/epicX67
+
+
+@font-face{
+    font-family: product-sans;
+    src: url(../css/fonts/ProductSans-Regular.ttf);
+}
+
+@font-face{
+    src: url(../css/fonts/Steradian-Bold.otf);
+    font-family: steradian;
+    font-weight: 900;
+}
+
+@keyframes anima{
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+//Main-Dynamic Variables
+//Change these colors or fonts according to your needs
+//After that compile through scss compiler
+//Done
+$primaryBg : #101216;
+$subBg : #292E39;
+$subBgM : #2A2F3A;
+$subBgST : #292e394d;
+$c_white : #dfdfdf;
+$c_whiteST : #ffffffb3;
+$accentColor : #2196f3;
+$accentColorST : #2195f369;
+$l-accentColor : #43B4FF;
+
+$dirty: #757575;
+$dirty-light: #a3a3a3;
+
+
+$gradientColor1 : #54dcff;
+$gradientColor2 : #68bbff;
+$gradientColor3 : #ffa754;
+$gradientColor4 : #ff7268;
+$gradientColor5 : #FFFFFF;
+
+
+$purple: #987bff;
+$purple-dark: #592bff;
+
+$orange: #FF5722;
+$orange-dark: #801e00;
+
+$orange2: #FF9800;
+$orange2-dark: #a16100;
+
+$green: #8BC34A;
+$green-dark: #458100;
+
+$yellow: #FFEB3B;
+$yellow-dark: #9b8b00;
+
+//Fonts
+$mainFont: steradian;
+$subFont: product-sans;
+
+//Configs
+$showAds: none;
+$buttomBarHeight: 25px;
+
+//$showAds: block;
+//$buttomBarHeight: 132px;
+
+
+
+
+//END
+
+//Dont touch these things if you dont know what you are doing.
+input::placeholder{
+    color: $dirty-light !important;
+    font-family: $mainFont;
+    font-size: 20px;
+}
+input{
+    color: $accentColor !important;
+    background: $subBg !important;
+}
+
+#modPckHead{
+    font-family: $mainFont;
+}
+
+#menuItemContainer{
+    position:absolute;
+    left:0;
+    top:66px;
+    bottom:0;
+    width:100px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+    background: $primaryBg;
+}
+#gameNameHolder{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 66px;
+    background-image: url(../img/headerBg.svg);
+    background-position: center;
+    border: 0;
+    outline: 0;
+    transform: unset;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainLogo {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 120px;
+    transform: translateY(-10px);
+}
+
+.headerBar{
+    background: unset;
+}
+
+.imageButton {
+    width: 70px;
+    margin-left: 10px !important;
+}
+
+#menuRegionLabel {
+    font-family: $mainFont;
+    font-size: 20px;
+}
+
+#menuPingDisplay .material-icons {
+    font-size: 22px;
+    transform: translateY(.03rem) translateX(-4px);
+}
+
+#menuAccountUsername{
+    font-family: $mainFont;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#menuLevelText {
+    font-size: 18px;
+    font-family: $mainFont;
+}
+
+.verticalSeparator {
+    background: $subBg;
+    width: 2px;
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.headerBarLeft{
+    background: unset;
+}
+
+.headerBarRight{
+    background: unset;
+}
+#streamContainer{
+
+}
+
+.chatItem{
+
+}
+
+.menuItem .menuItemTitle{
+    display: none;
+}
+.menuItem{
+    //height: 100px;
+    //width: 100px;
+    padding: 0;
+    height: auto;
+    width: 100px;
+    background: $primaryBg;
+    transition: background 280ms;
+    .menuItemIcon{
+        height: 30%;
+    }
+}
+
+.menuItem:hover{
+    // .menuItemTitle{
+    //     display: block;
+    // }
+    background-image: linear-gradient(to right top, $gradientColor1, $gradientColor2);
+    transition: background 280ms;
+}
+.menuItem:active{
+    background-image: linear-gradient(to right top, $gradientColor1, $gradientColor2);
+}
+
+.chatItem{
+    font-family: $mainFont;
+    font-size: 22px;
+}
+
+#chatHolder {
+    position: absolute;
+    z-index: 1000;
+    width: 280px;
+    bottom: 20px;
+    left: 20px;
+    background: $subBgST;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+#chatInput {
+    width: 260px;
+    font-size: 18px;
+    border-radius: 6px;
+    border-radius: 5px;
+    margin-left: 17px;
+    font-family: $mainFont;
+    font-size: 25px;
+}
+
+#voiceDisplay {
+    opacity: .5;
+    z-index: 2;
+    position: absolute;
+    bottom: 18px;
+    left: 303px;
+    z-index: 1111;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.chatMsg {
+    color: $c_whiteST;
+    font-family: $mainFont !important;
+    font-size: 20px;
+    span{
+        font-family: $mainFont !important;
+        font-size: 20px;
+    }
+}
+
+#streamContainer {
+    display: none;
+}
+
+.xpBar{
+    background-color: $subBg;
+    .xpBarB{
+        border-radius: 3px;
+        background-color: $accentColor;
+    }
+    .xpBarV {
+        font-size: 22px;
+        font-family: $subFont;
+    }
+}
+
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    background-image: linear-gradient(to left, $gradientColor1, $gradientColor2, $gradientColor3, $gradientColor4 );
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 50px;
+    font-family: $mainFont;
+    word-spacing: 1rem ;
+    color: transparent;
+    background-size: 450%;
+    animation: anima 10s linear infinite;
+}
+
+#instructionHolder{
+    *{
+        font-family: $mainFont !important;
+    }
+    div{
+        word-spacing: unset;
+    }
+}
+
+#mapInfoHolder{
+    div{
+        div{
+            display: none !important;
+        }
+        div:last-child{
+            display: inline-block !important;
+        }
+    }
+}
+
+
+#menuWindow {
+    border-radius: 0px;
+    background-color: $primaryBg;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+    a{
+        font-family: $subFont;
+        font-size: 25px;
+    }
+    div{
+        color: $c_white ;
+    }
+}
+
+#commMap{
+    font-family: $mainFont !important;
+    font-size: 25px !important;
+
+}
+div > #commMap{
+    float: left !important;
+    transform: translateY(-1px);
+}
+
+
+.mapListItem {
+    div{
+        a{
+            font-size: 20px !important;
+            font-family: $mainFont !important;
+        }
+        span{
+            font-size: 13px;
+            font-family: $mainFont !important;
+            color: $c_whiteST !important;
+            a{
+                font-size: 16px !important;
+                color: $c_white !important;
+                margin-left: 7px;
+            }
+        }
+        div{
+            font-size: 20px !important;
+            font-family: $mainFont;
+        }
+    }
+}
+
+.sliderVal{
+    color:$accentColor;
+    background: transparent;
+    border-radius:2px;
+    transform: translateY(-1px);
+}
+.sliderM{
+    -webkit-appearance:none;
+    appearance:none;
+    width:100%;
+    height:12px;
+    background-color:$subBgM;
+    outline:none;
+    border-radius:50px;
+    transform: translateY(-6px);
+}
+.sliderM::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    appearance:none;
+    width:30px;
+    height:30px;
+    border: 5px solid $accentColor;
+    border-radius: 50px;
+    background: $primaryBg;
+    cursor:pointer
+}
+.sliderM::-moz-range-thumb{
+    width:30px;
+    height:30px;
+    clip-path: circle();
+    background: linear-gradient(to right top, $gradientColor1,$gradientColor2);
+    cursor:pointer
+}
+.inputGrey{
+    background:linear-gradient(to right top, $gradientColor1, $gradientColor2);
+}
+.inputGrey2{
+    background: $subBgM;
+    color: $accentColor;
+    transform: translateY(-3px);
+    option{
+        background: $subBgM;
+        color: $accentColor;
+    }
+}
+
+.switch{
+    transform: translateY(-2px);
+}
+.slider, .slider2 {
+    position: absolute;
+    cursor: pointer;
+    top: 35%;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+    background-color: $subBgM;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50px;
+    transform: translateY(-1px);
+}
+input:checked+.slider{
+    
+}
+input:focus+.slider{
+    box-shadow:0 0 1px $accentColor
+}
+
+.slider:before, .slider2:before {
+    position: absolute;
+    transform: translateY(15px) translateX(-10px);
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $subBgM;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 5px solid $accentColorST;
+    border-radius: 50px;
+}
+
+input:checked+.slider:before, input:checked+.slider2:before{
+    -webkit-transform: translateY(15px) translateX(33px);
+    -ms-transform: translateY(15px) translateX(33px);
+    transform: translateY(15px) translateX(33px);
+    border: 5px solid $accentColor;
+    background-color: $primaryBg;
+}
+
+.settName, .settNameSmall {
+    font-family: $subFont;
+    font-size: 23px;
+    color: $c_white;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.2rem !important;
+    span{
+        color: $accentColor !important;
+        b{
+            color: $subBgM !important;
+        }
+    }
+}
+
+.settName{
+    span{
+        font-family: $subFont;
+        color: $l-accentColor !important;
+    }
+}
+
+.b {
+    font-size: 25px;
+    font-family: $mainFont;
+    font-weight: 1000;
+    color: $l-accentColor !important;
+    text-transform: uppercase;
+}
+
+.setHed {
+    font-size: 25px;
+    font-family: $mainFont;
+    font-weight: 1000;
+    color: $l-accentColor !important;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    span{
+        color: $c_white;
+    }
+}
+
+.settingsHeader {
+    background: $primaryBg;
+    transform: translateY(-2px);
+}
+
+.settingTab:hover {
+    border-bottom: 5px solid $c_white;
+}
+
+.settingTab {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 0 6px;
+    color: $c_white;
+}
+
+.tabANew {
+    /* cursor: default; */
+    border-bottom: 5px solid $l-accentColor;
+    color: $l-accentColor;
+}
+
+.tabANew:hover {
+    border-bottom: 5px solid $c_white;
+}
+
+.menuTabNew {
+    color: $c_white;
+    font-family: $mainFont;
+    font-size: 21px;
+}
+.menuTabNew:hover{
+    border-color: $l-accentColor;
+}
+.serverHeader{
+    background: $primaryBg;
+}
+
+.menuSelectorHeader {
+    font-size: 25px;
+    font-family: $subFont;
+    span{
+        font-size: 25px;
+        font-family: $subFont;
+    }
+    .material-icons{
+        font-size: 35px !important;
+        margin-right: .1rem !important;
+        font-family: 'Material Icons' !important;
+    }
+    *{
+        color: $c_white;
+    }
+}
+
+
+.slide {
+    border: 5px solid $subBgM;
+}
+
+.purejscarousel-btn-prev {
+    border-bottom: 8px solid $accentColor;
+    border-left: 8px solid $accentColor;
+}
+
+.purejscarousel-btn-prev:hover {
+    border-bottom: 8px solid $accentColorST;
+    border-left: 8px solid $accentColorST;
+}
+
+.purejscarousel-btn-next {
+    border-bottom: 8px solid $accentColor;
+    border-right: 8px solid $accentColor;
+}
+
+.purejscarousel-btn-next:hover {
+    border-bottom: 8px solid $accentColorST;
+    border-right: 8px solid $accentColorST;
+}
+
+
+.hostMapImg {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    width: 223px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all .2s;
+}
+.hostMap {
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+.hostOpt{
+    border: 2px solid transparent;
+    border-radius:5px;
+    background-color:transparent;
+    background: transparent;
+}
+
+.optCheck{
+    border-radius:4px;
+    background-color:$subBgM;
+    transition: background-color 200ms;
+}
+
+
+.optName{
+    text-shadow: unset;
+    color: $l-accentColor;
+    font-family: $mainFont;
+    font-size: 18px;
+    letter-spacing: .04rem;
+    text-align: center;
+}
+
+input:checked+.optCheck{
+    background-color:$accentColorST
+}
+input:checked+.optName{
+    color:$primaryBg;
+}
+input:hover+.optCheck{
+    background-color:$accentColorST
+}
+input:hover+.optName:hover{
+    color:$primaryBg;
+}
+
+input[type=color]{
+    border:unset;
+}
+#settSearch, #serverSearch, .formInput, #passCode,#customSnameTeam1,#customSnameTeam2 {
+    font-family: $mainFont;
+    background-color: transparent;
+    background: $subBgM !important;
+    color: $accentColor;
+    font-size: 18px;
+}
+
+#passCode,#rawMapData{
+    transform: translateY(-9px);
+}
+
+#settSearch, #serverSearch{
+    font-size: 22px;
+    width: 230px;
+    transform: translateY(-0.34rem);
+}
+.sideTabs {
+    width: 35%;
+}
+#hideFull{
+    span{
+        font-size: 25px;
+        font-family: $mainFont;
+        color: $accentColor;
+    }
+    .switch2{
+        transform: translateY(5px) translateX(10px);
+    }
+}
+
+.menuSelector {
+    font-size: 20px;
+    font-family: $mainFont;
+    *{
+        font-size: 20px;
+        font-family: $mainFont;
+    }
+}
+.menuSelector:hover{
+    background: $subBgM;
+}
+
+.quickJoin{
+    color: $accentColor !important;
+    background-color: $subBgM;
+    padding-right: 4px;
+    padding-left: 4px;
+    transition: color 280ms, background-color 280ms;
+}
+
+.quickJoin:hover{
+    color: $subBgM !important;
+    background-color: $accentColor;
+}
+
+#modDropper {
+    border: 4px solid $dirty-light;
+}
+#modLInfo{
+    color: $accentColor !important;
+    font-family: $subFont;
+    font-size: 25px;
+}
+
+
+
+
+
+.button.lgn {
+    font-size: 18px;
+    font-family: $subFont;
+    text-shadow: none;
+    color: $l-accentColor;
+    font-size: 23px;
+    border-radius: 0px;
+    border: 2px solid transparent;
+    background-color: $subBgM;
+    background: $subBgM;
+    box-shadow: inset 0 -7px 0 0 $l-accentColor;
+}
+
+
+.premiumSkinCol {
+    color: $l-accentColor!important;
+}
+
+.skinColorItem {
+    border: 3px solid $subBgM;
+}
+
+// .formInput {
+//     font-size: 18px !important;
+//     font-family: $subFont !important;
+//     color: $accentColor !important;
+//     padding-top: 10px !important;
+//     padding-bottom: 10px !important;
+//     padding-right: 10px !important;
+//     padding-left: 0px !important;
+//     background: transparent !important;
+//     border-radius: 0px !important;
+//     border-bottom: 4px solid $accentColor !important;
+//     transform: translateY(-10px);
+// }
+// .formInput::placeholder{
+//     color: $accentColorST;
+// }
+
+// #passCode,#customSnameTeam1,#customSnameTeam2{
+//     font-size: 18px !important;
+//     font-family: $subFont !important;
+//     color: $accentColor !important;
+//     padding-top: 10px !important;
+//     padding-bottom: 10px !important;
+//     padding-right: 10px !important;
+//     padding-left: 0px !important;
+//     background: transparent !important;
+//     border-radius: 0px !important;
+//     border-bottom: 4px solid $accentColor !important;
+//     transform: translateY(-15px);
+// }
+#customSnameTeam1,#customSnameTeam2{
+    transform: translateY(-10px);
+}
+
+#presetSelect, .hostPresetBtn, .hostToggle, .settingsBtn, .searchBtn{
+    background: $subBgM !important;
+    color: $accentColor !important;
+    transition: background 200ms, color 280ms;
+}
+
+#presetSelect:hover, .hostPresetBtn:hover, .hostToggle:hover, .settingsBtn:hover, .searchBtn:hover{
+    background: $accentColor !important;
+    color: $subBgM !important;
+}
+
+.settingsBtn{
+    transform: translateY(-0.19rem);
+}
+
+#requiresRestart {
+    color: $accentColor;
+    font-family: $mainFont;
+    span{
+        font-family: $mainFont; 
+    }
+}
+
+#menuBtnHost,#menuBtnBrowser,#menuBtnRanked,#inviteButton,#menuBtnJoin{
+    padding-top: 5px !important;
+    padding-bottom: 13px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    font-size: 25px !important;
+    font-family: $mainFont;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: none !important;
+    text-shadow: none !important;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 18px;
+    padding-top: 14px;
+    margin-bottom: 6px;
+    background-color: $primaryBg !important;
+    box-shadow: inset 0 -7px 0 0 $subBgM !important;
+    text-align: center;
+}
+#menuBtnHost{
+    //@extend: #B447FF;
+    color: $purple;
+}
+
+#menuBtnHost:hover{
+    color: $purple-dark;
+    background-color: $purple !important;
+    box-shadow: inset 0 -7px 0 0 $purple-dark !important;
+}
+
+#menuBtnBrowser{
+    //color: #FF4747;
+    color: $orange;
+}
+
+#menuBtnBrowser:hover{
+    color: $orange-dark;
+    background-color: $orange !important;
+    box-shadow: inset 0 -7px 0 0 $orange-dark !important;
+}
+
+#menuBtnRanked{
+    //color: #41C300;
+    color: $green;
+}
+
+#menuBtnRanked:hover{
+    color: $green-dark;
+    background-color: $green !important;
+    box-shadow: inset 0 -7px 0 0 $green-dark !important;
+}
+
+#inviteButton{
+    //color: #fbc02d;
+    color: $yellow;
+}
+
+#inviteButton:hover{
+    color: $yellow-dark;
+    background-color: $yellow !important;
+    box-shadow: inset 0 -7px 0 0 $yellow-dark !important;
+}
+
+#menuBtnJoin{
+    //color: #FFC147;
+    color: $orange2;
+}
+
+#menuBtnJoin:hover{
+    color: $orange2-dark;
+    background-color: $orange2 !important;
+    box-shadow: inset 0 -7px 0 0 $orange2-dark !important;
+}
+
+#customizeButton {
+    font-family: $mainFont;
+    text-shadow: none !important;
+    font-size: 30px;
+    color: $yellow;
+    background: $primaryBg;
+    box-shadow: inset 0 -7px 0 0 $subBgM !important;
+}
+
+#customizeButton:hover{
+    color: $yellow-dark;
+    background: $yellow;
+    box-shadow: inset 0 -7px 0 0 $yellow-dark !important;
+}
+
+
+//@extend
+#spectButton{
+    span{
+        font-family: $mainFont;
+        font-size: 25px !important;
+    }
+}
+.switchsml {
+    transform: translateY(-3px);
+}
+
+
+#claimImg {
+    margin-top: 10px;
+    height: 95px;
+    animation: scaleBob 2s ease-in-out infinite alternate;
+    -webkit-animation: scaleBob 2s ease-in-out infinite alternate;
+}
+
+#merchImg {
+    display: none;
+}
+#claimTimer {
+    font-size: 20px !important;
+    margin-top: 10px;
+    font-family: $mainFont;
+}
+
+#aHolder{
+    display: $showAds !important;
+}
+
+#subLogoButtons {
+    bottom: $buttomBarHeight !important;
+    .button{
+        z-index: 1001;
+    }
+}
+
+
+
+
+//LOGIN PAGE
+.accountInput {
+    font-size: 28px;
+    color: $accentColor;
+    font-family: $mainFont;
+    background: $subBgM;
+}
+
+#accResp{
+    color: $dirty !important;
+    font-family: $mainFont;
+    span{
+        color: $dirty-light !important;
+        font-family: $mainFont;
+    }
+}
+
+.accountButton{
+    font-size: 28px;
+    color: $accentColor !important;
+    font-family: $mainFont;
+    background: $subBgM !important;
+    transition: color 280ms, background 280ms;
+}
+
+.accountButton:hover{
+    color: $subBgM !important;
+    background: $accentColor !important;
+}
+
+
+.healthBarSeg {
+    width: 50px;
+    display: inline-block;
+    border-radius: unset;
+    margin-right: 0;
+    height: 100%;
+    background-color: none;
+    transform: translateX(5px);
+}
+
+#healthBar {
+    transform: translateX(-4px);
+}
+
+.hpBSeg {
+    height: 100%;
+    border-radius: unset;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+    transform: scaleX(1.05);
+}
+.healthBarSeg:first-child{
+    .hpBSeg{
+        border-radius: unset;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+}
+.healthBarSeg:last-child{
+    .hpBSeg{
+        border-radius: unset;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}

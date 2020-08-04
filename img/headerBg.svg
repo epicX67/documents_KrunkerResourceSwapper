@@ -1,0 +1,33 @@
+<svg width="1920" height="66" viewBox="0 0 1920 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1411.93 26.2493L1411.78 26.12H1411.59H1075.38H1075.17L1075.02 26.2714L1050.2 51.79H869.8L844.767 26.2699L844.62 26.12H844.41H508.41H508.217L508.074 26.2493L465.677 64.62H0.5V0.5H1919.5V64.62H1454.32L1411.93 26.2493Z" fill="#101216"/>
+<path class="anima" d="M524 12H830.53" stroke="url(#paint0_linear)" stroke-width="3" stroke-miterlimit="10"/>
+<path class="anima" d="M1091 12H1397.54" stroke="url(#paint1_linear)" stroke-width="3" stroke-miterlimit="10"/>
+<defs>
+<style>
+@keyframes heelo {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+.anima{
+    animation: heelo 2s linear infinite;
+}
+</style>
+<linearGradient id="paint0_linear" x1="524" y1="12" x2="831" y2="12" gradientUnits="userSpaceOnUse">
+<stop stop-color="#54dcff"/>
+<stop offset="1" stop-color="#68bbff"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="1091" y1="12" x2="1403" y2="12" gradientUnits="userSpaceOnUse">
+<stop stop-color="#68bbff"/>
+<stop offset="1" stop-color="#54dcff"/>
+</linearGradient>
+</defs>
+</svg>
