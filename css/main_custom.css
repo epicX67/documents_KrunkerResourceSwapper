@@ -185,8 +185,8 @@ input {
 }
 
 .menuItem:hover {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#54dcff), to(#68bbff));
-  background-image: linear-gradient(to right top, #54dcff, #68bbff);
+  background: -webkit-gradient(linear, left bottom, right top, from(#54dcff), to(#68bbff));
+  background: linear-gradient(to right top, #54dcff, #68bbff);
   -webkit-transition: background 280ms;
   transition: background 280ms;
 }
@@ -311,7 +311,11 @@ input {
   font-size: 25px;
 }
 
-#menuWindow div[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] {
+#menuWindow div[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"],
+#menuWindow div[style="color:rgba(0,0,0,0.3);margin-bottom:10px"],
+#menuWindow div[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:-3px"],
+#menuWindow div[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px"],
+#menuWindow #premTime {
   color: #dfdfdf !important;
   font-family: product-sans;
   font-size: 22px;
@@ -1296,5 +1300,37 @@ input[type=color] {
 
 .twitterSocial:active {
   background-image: url(../img/social-buttons/twitter-pressed.png);
+}
+
+.spinVal span, .shopCard span {
+  font-family: steradian;
+  font-size: 20px;
+}
+
+.chalCard {
+  text-shadow: unset;
+}
+
+.chalRight {
+  font-family: steradian;
+  font-size: 35px;
+  color: #2196f3;
+  text-shadow: unset;
+}
+
+.chalRight div {
+  font-family: product-sans;
+  font-size: 22px;
+  color: #dfdfdf;
+  text-shadow: unset;
+}
+
+.chalXPBar {
+  background: #292E39;
+}
+
+.chalXPBarC {
+  border-radius: 3px;
+  background-color: #2196f3;
 }
 /*# sourceMappingURL=main_custom.css.map */
