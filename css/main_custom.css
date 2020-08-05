@@ -1177,4 +1177,124 @@ input[type=color] {
   font-size: 18px;
   color: #dfdfdf !important;
 }
+
+.iconProfile {
+  background-image: url(../img/menu-icons/profile.png);
+}
+
+.menuItem:hover .iconProfile {
+  background-image: url(../img/menu-icons/profile-white.png);
+}
+
+.iconRanked {
+  background-image: url(../img/menu-icons/ranked.png);
+}
+
+.menuItem:hover .iconRanked {
+  background-image: url(../img/menu-icons/ranked-white.png);
+}
+
+.iconShop {
+  background-image: url(../img/menu-icons/shop.png);
+}
+
+.menuItem:hover .iconShop {
+  background-image: url(../img/menu-icons/shop-white.png);
+}
+
+.iconSocial {
+  background-image: url(../img/menu-icons/social.png);
+}
+
+.menuItem:hover .iconSocial {
+  background-image: url(../img/menu-icons/social-white.png);
+}
+
+.iconMaps {
+  background-image: url(../img/menu-icons/maps.png);
+}
+
+.menuItem:hover .iconMaps {
+  background-image: url(../img/menu-icons/maps-white.png);
+}
+
+.iconGames {
+  background-image: url(../img/menu-icons/games.png);
+}
+
+.menuItem:hover .iconGames {
+  background-image: url(../img/menu-icons/games-white.png);
+}
+
+.iconMods {
+  background-image: url(../img/menu-icons/mods.png);
+}
+
+.menuItem:hover .iconMods {
+  background-image: url(../img/menu-icons/mods-white.png);
+}
+
+.iconSettings {
+  background-image: url(../img/menu-icons/settings.png);
+}
+
+.menuItem:hover .iconSettings {
+  background-image: url(../img/menu-icons/settings-white.png);
+}
+
+.iconChall {
+  background-image: url(../img/menu-icons/chall.png);
+}
+
+.menuItem:hover .iconChall {
+  background-image: url(../img/menu-icons/chall-white.png);
+}
+
+.discordSocial {
+  background-image: url(../img/social-buttons/discord-normal.png);
+}
+
+.discordSocial:hover {
+  background-image: url(../img/social-buttons/discord-hover.png);
+}
+
+.discordSocial:active {
+  background-image: url(../img/social-buttons/discord-pressed.png);
+}
+
+.downloadClient {
+  background-image: url(../img/social-buttons/down_normal.png);
+}
+
+.downloadClient:hover {
+  background-image: url(../img/social-buttons/down_hover.png);
+}
+
+.downloadClient:active {
+  background-image: url(../img/social-buttons/down_pressed.png);
+}
+
+.redditSocial {
+  background-image: url(../img/social-buttons/reddit-normal.png);
+}
+
+.redditSocial:hover {
+  background-image: url(../img/social-buttons/reddit-hover.png);
+}
+
+.redditSocial:active {
+  background-image: url(../img/social-buttons/reddit-pressed.png);
+}
+
+.twitterSocial {
+  background-image: url(../img/social-buttons/twitter-normal.png);
+}
+
+.twitterSocial:hover {
+  background-image: url(../img/social-buttons/twitter-hover.png);
+}
+
+.twitterSocial:active {
+  background-image: url(../img/social-buttons/twitter-pressed.png);
+}
 /*# sourceMappingURL=main_custom.css.map */
