@@ -22,12 +22,12 @@
 }
 </style>
 <linearGradient id="paint0_linear" x1="524" y1="12" x2="831" y2="12" gradientUnits="userSpaceOnUse">
-<stop stop-color="#54dcff"/>
-<stop offset="1" stop-color="#68bbff"/>
+<stop stop-color="#5AD3FF"/>
+<stop offset="1" stop-color="#FF0186"/>
 </linearGradient>
 <linearGradient id="paint1_linear" x1="1091" y1="12" x2="1403" y2="12" gradientUnits="userSpaceOnUse">
-<stop stop-color="#68bbff"/>
-<stop offset="1" stop-color="#54dcff"/>
+<stop stop-color="#FF0186"/>
+<stop offset="1" stop-color="#5AD3FF"/>
 </linearGradient>
 </defs>
 </svg>
