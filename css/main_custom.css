@@ -311,7 +311,111 @@ input {
   font-size: 25px;
 }
 
-#menuWindow div {
+#menuWindow div[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] {
+  color: #dfdfdf !important;
+  font-family: product-sans;
+  font-size: 22px;
+}
+
+#menuWindow div[style="font-size:26px;margin-top:10px;font-weight:bold"],
+#menuWindow div[style="font-size:26px;margin-top:20px;font-weight:bold"],
+#menuWindow div[style="font-size:26px;margin-top:12px;"],
+#menuWindow div[style="font-size:26px;margin-top:20px;"] {
+  font-family: steradian;
+  color: #2196f3;
+  text-transform: uppercase;
+}
+
+#menuWindow div[style="color:rgba(0,0,0,0.4);margin-bottom:20px"],
+#menuWindow div[style="font-size:17px;color:rgba(0,0,0,0.4);margin-top:5px"] {
+  color: #dfdfdf !important;
+  font-family: product-sans;
+  font-size: 22px !important;
+  margin-top: .5rem;
+}
+
+#menuWindow div[style="color:rgba(0,0,0,0.4);margin-bottom:20px"] b,
+#menuWindow div[style="font-size:17px;color:rgba(0,0,0,0.4);margin-top:5px"] b {
+  font-family: product-sans !important;
+  color: #2196f3 !important;
+  text-shadow: unset !important;
+}
+
+#menuWindow span[style="float:right;color:rgba(0,0,0,0.4)"] {
+  color: #a3a3a3 !important;
+  font-family: product-sans;
+  font-size: 22px;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+#menuWindow #skinList div {
+  color: #dfdfdf !important;
+  font-family: product-sans;
+  font-size: 22px;
+}
+
+#menuWindow div[style="text-align:left;margin-top:30px"] #hostGameMsg {
+  color: #a3a3a3;
+  font-family: steradian;
+  font-size: 22px;
+}
+
+#menuWindow div[style="font-size:20px"] b[style="color:rgba(0,0,0,0.6)"] {
+  font-family: steradian !important;
+  color: #2196f3 !important;
+}
+
+#menuWindow div[style="font-size:20px"] b[style="color:rgba(0,0,0,0.6)"] span {
+  font-family: steradian !important;
+  color: #2196f3 !important;
+}
+
+#setHed_local,
+#setHed_network,
+#setHed_gameplay,
+#setHed_controller,
+#setHed_interface,
+#setHed_chat,
+#setHed_crosshair,
+#setHed_hitmarker,
+#setHed_quality,
+#setHed_editing,
+#setHed_viewmodel,
+#setHed_mods,
+#setHed_audio {
+  color: #2196f3;
+}
+
+#setHed_local .material-icons,
+#setHed_network .material-icons,
+#setHed_gameplay .material-icons,
+#setHed_controller .material-icons,
+#setHed_interface .material-icons,
+#setHed_chat .material-icons,
+#setHed_crosshair .material-icons,
+#setHed_hitmarker .material-icons,
+#setHed_quality .material-icons,
+#setHed_editing .material-icons,
+#setHed_viewmodel .material-icons,
+#setHed_mods .material-icons,
+#setHed_audio .material-icons {
+  font-family: Material Icons;
+}
+
+#setHed_local span,
+#setHed_network span,
+#setHed_gameplay span,
+#setHed_controller span,
+#setHed_interface span,
+#setHed_chat span,
+#setHed_crosshair span,
+#setHed_hitmarker span,
+#setHed_quality span,
+#setHed_editing span,
+#setHed_viewmodel span,
+#setHed_mods span,
+#setHed_audio span {
   color: #dfdfdf;
 }
 
@@ -469,6 +573,11 @@ input:checked + .slider:before, input:checked + .slider2:before {
   color: #2A2F3A !important;
 }
 
+.settName span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"], .settNameSmall span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"] {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .settName span {
   font-family: product-sans;
   color: #43B4FF !important;
@@ -480,6 +589,11 @@ input:checked + .slider:before, input:checked + .slider2:before {
   font-weight: 1000;
   color: #43B4FF !important;
   text-transform: uppercase;
+}
+
+#profilePicM {
+  -webkit-transform: translateY(32px);
+          transform: translateY(32px);
 }
 
 .setHed {
@@ -511,12 +625,14 @@ input:checked + .slider:before, input:checked + .slider2:before {
   display: inline-block;
   padding: 10px 0 6px;
   color: #dfdfdf;
+  font-size: 20px;
+  font-family: steradian;
 }
 
 .tabANew {
   /* cursor: default; */
   border-bottom: 5px solid #43B4FF;
-  color: #43B4FF;
+  color: #43B4FF !important;
 }
 
 .tabANew:hover {
@@ -540,6 +656,7 @@ input:checked + .slider:before, input:checked + .slider2:before {
 .menuSelectorHeader {
   font-size: 25px;
   font-family: product-sans;
+  color: #a3a3a3;
 }
 
 .menuSelectorHeader span {
@@ -664,6 +781,12 @@ input[type=color] {
           transform: translateY(-0.34rem);
 }
 
+#serverSearch {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  height: 34px;
+}
+
 .sideTabs {
   width: 35%;
 }
@@ -682,11 +805,13 @@ input[type=color] {
 .menuSelector {
   font-size: 20px;
   font-family: steradian;
+  color: #dfdfdf;
 }
 
 .menuSelector * {
   font-size: 20px;
   font-family: steradian;
+  color: #a3a3a3;
 }
 
 .menuSelector:hover {
@@ -744,14 +869,24 @@ input[type=color] {
           transform: translateY(-10px);
 }
 
-#presetSelect, .hostPresetBtn, .hostToggle, .settingsBtn, .searchBtn {
+#presetSelect,
+.hostPresetBtn,
+.hostToggle,
+.settingsBtn,
+.searchBtn,
+.subPassChg {
   background: #2A2F3A !important;
   color: #2196f3 !important;
   -webkit-transition: background 200ms, color 280ms;
   transition: background 200ms, color 280ms;
 }
 
-#presetSelect:hover, .hostPresetBtn:hover, .hostToggle:hover, .settingsBtn:hover, .searchBtn:hover {
+#presetSelect:hover,
+.hostPresetBtn:hover,
+.hostToggle:hover,
+.settingsBtn:hover,
+.searchBtn:hover,
+.subPassChg:hover {
   background: #2196f3 !important;
   color: #2A2F3A !important;
 }
@@ -972,5 +1107,74 @@ input[type=color] {
   border-radius: unset;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+#endAHolder {
+  display: none;
+}
+
+.reqWIcon {
+  color: #292E39 !important;
+}
+
+.reqWLvl {
+  color: #2196f3 !important;
+  font-family: steradian;
+  font-size: 25px;
+}
+
+.reqWTxt {
+  color: #dfdfdf;
+  font-family: product-sans;
+  font-size: 19px;
+}
+
+.partyUsername span {
+  font-family: steradian;
+  font-size: 20px;
+  color: #dfdfdf;
+}
+
+.rankedWarning {
+  font-family: steradian;
+  font-size: 25px;
+  color: #a3a3a3;
+}
+
+.joinQueue {
+  font-family: steradian;
+  font-size: 30px;
+  color: #2196f3;
+  background: #292E39;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  text-shadow: unset !important;
+  border-radius: 10px;
+  -webkit-transition: color 280ms, background 280ms;
+  transition: color 280ms, background 280ms;
+}
+
+.joinQueue:hover {
+  color: #292E39;
+  background: #2196f3;
+}
+
+.mailObj {
+  background: #292E39 !important;
+  color: #dfdfdf !important;
+  font-family: product-sans;
+  font-size: 20px;
+}
+
+.mailFrom, .mailDate {
+  font-family: steradian;
+  font-size: 25px;
+  color: #2196f3 !important;
+}
+
+.mailText {
+  font-family: product-sans;
+  font-size: 18px;
+  color: #dfdfdf !important;
 }
 /*# sourceMappingURL=main_custom.css.map */

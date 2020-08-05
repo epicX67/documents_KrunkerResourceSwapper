@@ -1,7 +1,7 @@
 //Written by epicX67
 //If you like my work, support me :)
 //paypal.me/epicX67
-
+@import "../css/_configs.scss";
 
 @font-face{
     font-family: product-sans;
@@ -25,58 +25,6 @@
         background-position: 0% 100%;
     }
 }
-
-
-//Main-Dynamic Variables
-//Change these colors or fonts according to your needs
-//After that compile through scss compiler
-//Done
-$primaryBg : #101216;
-$subBg : #292E39;
-$subBgM : #2A2F3A;
-$subBgST : #292e394d;
-$c_white : #dfdfdf;
-$c_whiteST : #ffffffb3;
-$accentColor : #2196f3;
-$accentColorST : #2195f369;
-$l-accentColor : #43B4FF;
-
-$dirty: #757575;
-$dirty-light: #a3a3a3;
-
-
-$gradientColor1 : #54dcff;
-$gradientColor2 : #68bbff;
-$gradientColor3 : #ffa754;
-$gradientColor4 : #ff7268;
-$gradientColor5 : #FFFFFF;
-
-
-$purple: #987bff;
-$purple-dark: #592bff;
-
-$orange: #FF5722;
-$orange-dark: #801e00;
-
-$orange2: #FF9800;
-$orange2-dark: #a16100;
-
-$green: #8BC34A;
-$green-dark: #458100;
-
-$yellow: #FFEB3B;
-$yellow-dark: #9b8b00;
-
-//Fonts
-$mainFont: steradian;
-$subFont: product-sans;
-
-//Configs
-$showAds: none;
-$buttomBarHeight: 25px;
-
-//$showAds: block;
-//$buttomBarHeight: 132px;
 
 
 
@@ -327,10 +275,97 @@ input{
         font-family: $subFont;
         font-size: 25px;
     }
-    div{
-        color: $c_white ;
+    
+    div[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"]{
+        color: $c_white !important;
+        font-family: $subFont;
+        font-size: 22px;
+    }
+    div[style="font-size:26px;margin-top:10px;font-weight:bold"],
+    div[style="font-size:26px;margin-top:20px;font-weight:bold"],
+    div[style="font-size:26px;margin-top:12px;"],
+    div[style="font-size:26px;margin-top:20px;"]{
+        font-family: steradian;
+        color: $accentColor;
+        text-transform: uppercase;
+    }
+
+    div[style="color:rgba(0,0,0,0.4);margin-bottom:20px"],
+    div[style="font-size:17px;color:rgba(0,0,0,0.4);margin-top:5px"]{
+        color: $c_white !important;
+        font-family: $subFont;
+        font-size: 22px !important;
+        margin-top: .5rem;
+        b{
+            font-family: $subFont !important;
+            color: $accentColor !important;
+            text-shadow: unset !important;
+        }
+    }
+
+    span[style="float:right;color:rgba(0,0,0,0.4)"]{
+        color: $dirty-light !important;
+        font-family: $subFont;
+        font-size: 22px;
+        transform: translateY(6px);
+    }
+
+    #skinList{
+        div{
+            color: $c_white !important;
+            font-family: $subFont;
+            font-size: 22px;
+        }
+    }
+
+
+
+    div[style="text-align:left;margin-top:30px"]{
+        #hostGameMsg{
+            color: $dirty-light;
+            font-family: $mainFont;
+            font-size: 22px;
+        }
+    }
+
+
+    div[style="font-size:20px"]{
+        b[style="color:rgba(0,0,0,0.6)"]{
+            font-family: $mainFont !important;
+            color: $accentColor !important;
+            span{
+                font-family: $mainFont !important;
+                color: $accentColor !important;
+            }
+        }
+    }
+
+}
+
+#setHed_local,
+#setHed_network,
+#setHed_gameplay,
+#setHed_controller,
+#setHed_interface,
+#setHed_chat,
+#setHed_crosshair,
+#setHed_hitmarker,
+#setHed_quality,
+#setHed_editing,
+#setHed_viewmodel,
+#setHed_mods,
+#setHed_audio{
+    .material-icons{
+        font-family: Material Icons;
+    }
+    color: $accentColor;
+    span{
+        color: $c_white;
     }
 }
+
+
+
 
 #commMap{
     font-family: $mainFont !important;
@@ -470,6 +505,9 @@ input:checked+.slider:before, input:checked+.slider2:before{
             color: $subBgM !important;
         }
     }
+    span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"]{
+        transform: translateY(-5px);
+    }
 }
 
 .settName{
@@ -485,6 +523,10 @@ input:checked+.slider:before, input:checked+.slider2:before{
     font-weight: 1000;
     color: $l-accentColor !important;
     text-transform: uppercase;
+}
+
+#profilePicM{
+    transform: translateY(32px);
 }
 
 .setHed {
@@ -514,12 +556,14 @@ input:checked+.slider:before, input:checked+.slider2:before{
     display: inline-block;
     padding: 10px 0 6px;
     color: $c_white;
+    font-size: 20px;
+    font-family: $mainFont;
 }
 
 .tabANew {
     /* cursor: default; */
     border-bottom: 5px solid $l-accentColor;
-    color: $l-accentColor;
+    color: $l-accentColor !important;
 }
 
 .tabANew:hover {
@@ -541,6 +585,7 @@ input:checked+.slider:before, input:checked+.slider2:before{
 .menuSelectorHeader {
     font-size: 25px;
     font-family: $subFont;
+    color: $dirty-light;
     span{
         font-size: 25px;
         font-family: $subFont;
@@ -654,6 +699,11 @@ input[type=color]{
     width: 230px;
     transform: translateY(-0.34rem);
 }
+#serverSearch{
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    height: 34px;
+}
 .sideTabs {
     width: 35%;
 }
@@ -671,9 +721,11 @@ input[type=color]{
 .menuSelector {
     font-size: 20px;
     font-family: $mainFont;
+    color: $c_white;
     *{
         font-size: 20px;
         font-family: $mainFont;
+        color: $dirty-light;
     }
 }
 .menuSelector:hover{
@@ -762,13 +814,23 @@ input[type=color]{
     transform: translateY(-10px);
 }
 
-#presetSelect, .hostPresetBtn, .hostToggle, .settingsBtn, .searchBtn{
+#presetSelect, 
+.hostPresetBtn, 
+.hostToggle, 
+.settingsBtn, 
+.searchBtn,
+.subPassChg{
     background: $subBgM !important;
     color: $accentColor !important;
     transition: background 200ms, color 280ms;
 }
 
-#presetSelect:hover, .hostPresetBtn:hover, .hostToggle:hover, .settingsBtn:hover, .searchBtn:hover{
+#presetSelect:hover, 
+.hostPresetBtn:hover, 
+.hostToggle:hover, 
+.settingsBtn:hover, 
+.searchBtn:hover,
+.subPassChg:hover{
     background: $accentColor !important;
     color: $subBgM !important;
 }
@@ -986,4 +1048,70 @@ input[type=color]{
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
     }
+}
+
+#endAHolder{
+    display: none;
+}
+
+//Rank Panel
+.reqWIcon{
+    color: $subBg !important;
+}
+.reqWLvl{
+    color: $accentColor !important;
+    font-family: $mainFont;
+    font-size: 25px;
+}
+.reqWTxt{
+    color: $c_white;
+    font-family: $subFont;
+    font-size: 19px;
+}
+
+.partyUsername{
+    span{
+        font-family: $mainFont;
+        font-size: 20px;
+        color: $c_white;
+    }
+}
+.rankedWarning{
+    font-family: $mainFont;
+    font-size: 25px;
+    color: $dirty-light;
+}
+
+.joinQueue{
+    font-family: $mainFont;
+    font-size: 30px;
+    color: $accentColor;
+    background: $subBg;
+    box-shadow: unset !important;
+    text-shadow: unset !important;
+    border-radius: 10px;
+    transition: color 280ms, background 280ms;
+}
+.joinQueue:hover{
+    color: $subBg;
+    background: $accentColor;
+}
+
+//Inbox
+.mailObj{
+    background: $subBg !important;
+    color: $c_white !important;
+    font-family: $subFont;
+    font-size: 20px;
+}
+.mailFrom,.mailDate{
+    font-family: $mainFont;
+    font-size: 25px;
+    color: $accentColor !important;
+}
+
+.mailText{
+    font-family: $subFont;
+    font-size: 18px;
+    color: $c_white !important;
 }
