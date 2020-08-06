@@ -1,7 +1,37 @@
 //Written by epicX67
 //If you like my work, support me :)
 //paypal.me/epicX67
-@import "../css/_configs.scss";
+@import url(configs.css);
+$primaryBg : var(--primaryBg);
+$subBg : var(--subBg);
+$subBgM : var(--subBgM);
+$subBgST : var(--subBgST);
+$c_white : var(--c_white);
+$c_whiteST : var(--c_whiteST);
+$accentColor : var(--accentColor);
+$accentColorST : var(--accentColorST);
+$l-accentColor : var(--l-accentColor);
+$dirty: var(--dirty);
+$dirty-light: var(--dirty-light);
+$gradientColor1 : var(--gradientColor1);
+$gradientColor2 : var(--gradientColor2);
+$gradientColor3 : var(--gradientColor3);
+$gradientColor4 : var(--gradientColor4);
+$gradientColor5 : var(--gradientColor5);
+$purple: var(--purple);
+$purple-dark: var(--purple-dark);
+$orange: var(--orange);
+$orange-dark: var(--orange-dark);
+$orange2: var(--orange2);
+$orange2-dark: var(--orange2-dark);
+$green: var(--green);
+$green-dark: var(--green-dark);
+$yellow: var(--yellow);
+$yellow-dark: var(--yellow-dark);
+$mainFont: var(--mainFont);
+$subFont: var(--subFont);
+$showAds: var(--showAds);
+$buttomBarHeight: var(--buttomBarHeight);
 
 @font-face{
     font-family: product-sans;
@@ -165,6 +195,10 @@ input{
 .chatItem{
     font-family: $mainFont;
     font-size: 22px;
+    span{
+        font-family: $mainFont;
+        font-size: 22px;
+    }
 }
 
 #chatHolder {
@@ -315,7 +349,7 @@ input{
     }
 
     #skinList{
-        div{
+        div[style="margin-bottom:10px;color:rgba(0,0,0,0.5);"]{
             color: $c_white !important;
             font-family: $subFont;
             font-size: 22px;
@@ -340,6 +374,43 @@ input{
             span{
                 font-family: $mainFont !important;
                 color: $accentColor !important;
+            }
+        }
+    }
+
+    div[style="background-color:gainsboro;border-radius: 6px;"]{
+        background: transparent !important;
+        div{
+            font-family: $mainFont !important;
+            font-size: 22px !important;
+            color: $c_white !important;
+            text-shadow: unset !important;
+            span{
+                font-family: $mainFont !important;
+                font-size: 22px !important;
+                color: $accentColor !important;
+                text-shadow: unset !important;
+                a{
+                    font-family: $mainFont !important;
+                    font-size: 22px !important;
+                    color: $c_white !important;
+                    text-shadow: unset !important;
+                }
+            }
+            span[style="float:right"]{
+                background: $subBg !important;
+            }
+            .kick{
+                background-color: $subBg;
+                color: $orange2 !important;
+            }
+            .ban{
+                background-color: $subBg;
+                color: $orange !important;
+            }
+            .vote{
+                background-color: $subBg;
+                color: $purple !important;
             }
         }
     }

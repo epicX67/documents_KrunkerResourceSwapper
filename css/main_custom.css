@@ -1,3 +1,4 @@
+@import url(configs.css);
 @font-face {
   font-family: product-sans;
   src: url(../css/fonts/ProductSans-Regular.ttf);
@@ -34,36 +35,36 @@
 }
 
 input::-webkit-input-placeholder {
-  color: #a3a3a3 !important;
-  font-family: steradian;
+  color: var(--dirty-light) !important;
+  font-family: var(--mainFont);
   font-size: 20px;
 }
 
 input:-ms-input-placeholder {
-  color: #a3a3a3 !important;
-  font-family: steradian;
+  color: var(--dirty-light) !important;
+  font-family: var(--mainFont);
   font-size: 20px;
 }
 
 input::-ms-input-placeholder {
-  color: #a3a3a3 !important;
-  font-family: steradian;
+  color: var(--dirty-light) !important;
+  font-family: var(--mainFont);
   font-size: 20px;
 }
 
 input::placeholder {
-  color: #a3a3a3 !important;
-  font-family: steradian;
+  color: var(--dirty-light) !important;
+  font-family: var(--mainFont);
   font-size: 20px;
 }
 
 input {
-  color: #2196f3 !important;
-  background: #292E39 !important;
+  color: var(--accentColor) !important;
+  background: var(--subBg) !important;
 }
 
 #modPckHead {
-  font-family: steradian;
+  font-family: var(--mainFont);
 }
 
 #menuItemContainer {
@@ -85,7 +86,7 @@ input {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background: #101216;
+  background: var(--primaryBg);
 }
 
 #gameNameHolder {
@@ -130,7 +131,7 @@ input {
 }
 
 #menuRegionLabel {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 20px;
 }
 
@@ -141,18 +142,18 @@ input {
 }
 
 #menuAccountUsername {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 25px;
   margin-left: 10px;
 }
 
 #menuLevelText {
   font-size: 18px;
-  font-family: steradian;
+  font-family: var(--mainFont);
 }
 
 .verticalSeparator {
-  background: #292E39;
+  background: var(--subBg);
   width: 2px;
   height: 40px;
   margin-left: 15px;
@@ -175,7 +176,7 @@ input {
   padding: 0;
   height: auto;
   width: 100px;
-  background: #101216;
+  background: var(--primaryBg);
   -webkit-transition: background 280ms;
   transition: background 280ms;
 }
@@ -185,19 +186,24 @@ input {
 }
 
 .menuItem:hover {
-  background: -webkit-gradient(linear, left bottom, right top, from(#54dcff), to(#FF0186));
-  background: linear-gradient(to right top, #54dcff, #FF0186);
+  background: -webkit-gradient(linear, left bottom, right top, from(var(--gradientColor1)), to(var(--gradientColor2)));
+  background: linear-gradient(to right top, var(--gradientColor1), var(--gradientColor2));
   -webkit-transition: background 280ms;
   transition: background 280ms;
 }
 
 .menuItem:active {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#54dcff), to(#FF0186));
-  background-image: linear-gradient(to right top, #54dcff, #FF0186);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(var(--gradientColor1)), to(var(--gradientColor2)));
+  background-image: linear-gradient(to right top, var(--gradientColor1), var(--gradientColor2));
 }
 
 .chatItem {
-  font-family: steradian;
+  font-family: var(--mainFont);
+  font-size: 22px;
+}
+
+.chatItem span {
+  font-family: var(--mainFont);
   font-size: 22px;
 }
 
@@ -207,7 +213,7 @@ input {
   width: 280px;
   bottom: 20px;
   left: 20px;
-  background: #292e394d;
+  background: var(--subBgST);
   padding: 12px;
   border-radius: 5px;
 }
@@ -218,7 +224,7 @@ input {
   border-radius: 6px;
   border-radius: 5px;
   margin-left: 17px;
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 25px;
 }
 
@@ -234,13 +240,13 @@ input {
 }
 
 .chatMsg {
-  color: #ffffffb3;
-  font-family: steradian !important;
+  color: var(--c_whiteST);
+  font-family: var(--mainFont) !important;
   font-size: 20px;
 }
 
 .chatMsg span {
-  font-family: steradian !important;
+  font-family: var(--mainFont) !important;
   font-size: 20px;
 }
 
@@ -249,17 +255,17 @@ input {
 }
 
 .xpBar {
-  background-color: #292E39;
+  background-color: var(--subBg);
 }
 
 .xpBar .xpBarB {
   border-radius: 3px;
-  background-color: #2196f3;
+  background-color: var(--accentColor);
 }
 
 .xpBar .xpBarV {
   font-size: 22px;
-  font-family: product-sans;
+  font-family: var(--subFont);
 }
 
 #instructions {
@@ -270,12 +276,12 @@ input {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 9;
-  background-image: -webkit-gradient(linear, right top, left top, from(#54dcff), color-stop(#FF0186), color-stop(#54dcff), to(#FF0186));
-  background-image: linear-gradient(to left, #54dcff, #FF0186, #54dcff, #FF0186);
+  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradientColor1)), color-stop(var(--gradientColor2)), color-stop(var(--gradientColor3)), to(var(--gradientColor4)));
+  background-image: linear-gradient(to left, var(--gradientColor1), var(--gradientColor2), var(--gradientColor3), var(--gradientColor4));
   background-clip: text;
   -webkit-background-clip: text;
   font-size: 50px;
-  font-family: steradian;
+  font-family: var(--mainFont);
   word-spacing: 1rem;
   color: transparent;
   background-size: 450%;
@@ -284,7 +290,7 @@ input {
 }
 
 #instructionHolder * {
-  font-family: steradian !important;
+  font-family: var(--mainFont) !important;
 }
 
 #instructionHolder div {
@@ -301,13 +307,13 @@ input {
 
 #menuWindow {
   border-radius: 0px;
-  background-color: #101216;
+  background-color: var(--primaryBg);
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
 
 #menuWindow a {
-  font-family: product-sans;
+  font-family: var(--subFont);
   font-size: 25px;
 }
 
@@ -316,8 +322,8 @@ input {
 #menuWindow div[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:-3px"],
 #menuWindow div[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px"],
 #menuWindow #premTime {
-  color: #dfdfdf !important;
-  font-family: product-sans;
+  color: var(--c_white) !important;
+  font-family: var(--subFont);
   font-size: 22px;
 }
 
@@ -326,53 +332,97 @@ input {
 #menuWindow div[style="font-size:26px;margin-top:12px;"],
 #menuWindow div[style="font-size:26px;margin-top:20px;"] {
   font-family: steradian;
-  color: #2196f3;
+  color: var(--accentColor);
   text-transform: uppercase;
 }
 
 #menuWindow div[style="color:rgba(0,0,0,0.4);margin-bottom:20px"],
 #menuWindow div[style="font-size:17px;color:rgba(0,0,0,0.4);margin-top:5px"] {
-  color: #dfdfdf !important;
-  font-family: product-sans;
+  color: var(--c_white) !important;
+  font-family: var(--subFont);
   font-size: 22px !important;
   margin-top: .5rem;
 }
 
 #menuWindow div[style="color:rgba(0,0,0,0.4);margin-bottom:20px"] b,
 #menuWindow div[style="font-size:17px;color:rgba(0,0,0,0.4);margin-top:5px"] b {
-  font-family: product-sans !important;
-  color: #2196f3 !important;
+  font-family: var(--subFont) !important;
+  color: var(--accentColor) !important;
   text-shadow: unset !important;
 }
 
 #menuWindow span[style="float:right;color:rgba(0,0,0,0.4)"] {
-  color: #a3a3a3 !important;
-  font-family: product-sans;
+  color: var(--dirty-light) !important;
+  font-family: var(--subFont);
   font-size: 22px;
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
 }
 
-#menuWindow #skinList div {
-  color: #dfdfdf !important;
-  font-family: product-sans;
+#menuWindow #skinList div[style="margin-bottom:10px;color:rgba(0,0,0,0.5);"] {
+  color: var(--c_white) !important;
+  font-family: var(--subFont);
   font-size: 22px;
 }
 
 #menuWindow div[style="text-align:left;margin-top:30px"] #hostGameMsg {
-  color: #a3a3a3;
-  font-family: steradian;
+  color: var(--dirty-light);
+  font-family: var(--mainFont);
   font-size: 22px;
 }
 
 #menuWindow div[style="font-size:20px"] b[style="color:rgba(0,0,0,0.6)"] {
-  font-family: steradian !important;
-  color: #2196f3 !important;
+  font-family: var(--mainFont) !important;
+  color: var(--accentColor) !important;
 }
 
 #menuWindow div[style="font-size:20px"] b[style="color:rgba(0,0,0,0.6)"] span {
-  font-family: steradian !important;
-  color: #2196f3 !important;
+  font-family: var(--mainFont) !important;
+  color: var(--accentColor) !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] {
+  background: transparent !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div {
+  font-family: var(--mainFont) !important;
+  font-size: 22px !important;
+  color: var(--c_white) !important;
+  text-shadow: unset !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div span {
+  font-family: var(--mainFont) !important;
+  font-size: 22px !important;
+  color: var(--accentColor) !important;
+  text-shadow: unset !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div span a {
+  font-family: var(--mainFont) !important;
+  font-size: 22px !important;
+  color: var(--c_white) !important;
+  text-shadow: unset !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div span[style="float:right"] {
+  background: var(--subBg) !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div .kick {
+  background-color: var(--subBg);
+  color: var(--orange2) !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div .ban {
+  background-color: var(--subBg);
+  color: var(--orange) !important;
+}
+
+#menuWindow div[style="background-color:gainsboro;border-radius: 6px;"] div .vote {
+  background-color: var(--subBg);
+  color: var(--purple) !important;
 }
 
 #setHed_local,
@@ -388,7 +438,7 @@ input {
 #setHed_viewmodel,
 #setHed_mods,
 #setHed_audio {
-  color: #2196f3;
+  color: var(--accentColor);
 }
 
 #setHed_local .material-icons,
@@ -420,11 +470,11 @@ input {
 #setHed_viewmodel span,
 #setHed_mods span,
 #setHed_audio span {
-  color: #dfdfdf;
+  color: var(--c_white);
 }
 
 #commMap {
-  font-family: steradian !important;
+  font-family: var(--mainFont) !important;
   font-size: 25px !important;
 }
 
@@ -436,28 +486,28 @@ div > #commMap {
 
 .mapListItem div a {
   font-size: 20px !important;
-  font-family: steradian !important;
+  font-family: var(--mainFont) !important;
 }
 
 .mapListItem div span {
   font-size: 13px;
-  font-family: steradian !important;
-  color: #ffffffb3 !important;
+  font-family: var(--mainFont) !important;
+  color: var(--c_whiteST) !important;
 }
 
 .mapListItem div span a {
   font-size: 16px !important;
-  color: #dfdfdf !important;
+  color: var(--c_white) !important;
   margin-left: 7px;
 }
 
 .mapListItem div div {
   font-size: 20px !important;
-  font-family: steradian;
+  font-family: var(--mainFont);
 }
 
 .sliderVal {
-  color: #2196f3;
+  color: var(--accentColor);
   background: transparent;
   border-radius: 2px;
   -webkit-transform: translateY(-1px);
@@ -470,7 +520,7 @@ div > #commMap {
        appearance: none;
   width: 100%;
   height: 12px;
-  background-color: #2A2F3A;
+  background-color: var(--subBgM);
   outline: none;
   border-radius: 50px;
   -webkit-transform: translateY(-6px);
@@ -482,9 +532,9 @@ div > #commMap {
   appearance: none;
   width: 30px;
   height: 30px;
-  border: 5px solid #2196f3;
+  border: 5px solid var(--accentColor);
   border-radius: 50px;
-  background: #101216;
+  background: var(--primaryBg);
   cursor: pointer;
 }
 
@@ -492,25 +542,25 @@ div > #commMap {
   width: 30px;
   height: 30px;
   clip-path: circle();
-  background: linear-gradient(to right top, #54dcff, #FF0186);
+  background: linear-gradient(to right top, var(--gradientColor1), var(--gradientColor2));
   cursor: pointer;
 }
 
 .inputGrey {
-  background: -webkit-gradient(linear, left bottom, right top, from(#54dcff), to(#FF0186));
-  background: linear-gradient(to right top, #54dcff, #FF0186);
+  background: -webkit-gradient(linear, left bottom, right top, from(var(--gradientColor1)), to(var(--gradientColor2)));
+  background: linear-gradient(to right top, var(--gradientColor1), var(--gradientColor2));
 }
 
 .inputGrey2 {
-  background: #2A2F3A;
-  color: #2196f3;
+  background: var(--subBgM);
+  color: var(--accentColor);
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
 
 .inputGrey2 option {
-  background: #2A2F3A;
-  color: #2196f3;
+  background: var(--subBgM);
+  color: var(--accentColor);
 }
 
 .switch {
@@ -525,7 +575,7 @@ div > #commMap {
   left: 0;
   right: 0;
   bottom: 35%;
-  background-color: #2A2F3A;
+  background-color: var(--subBgM);
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50px;
@@ -534,8 +584,8 @@ div > #commMap {
 }
 
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196f3;
-          box-shadow: 0 0 1px #2196f3;
+  -webkit-box-shadow: 0 0 1px var(--accentColor);
+          box-shadow: 0 0 1px var(--accentColor);
 }
 
 .slider:before, .slider2:before {
@@ -547,34 +597,34 @@ input:focus + .slider {
   width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: #2A2F3A;
+  background-color: var(--subBgM);
   -webkit-transition: .4s;
   transition: .4s;
-  border: 5px solid #2195f369;
+  border: 5px solid var(--accentColorST);
   border-radius: 50px;
 }
 
 input:checked + .slider:before, input:checked + .slider2:before {
   -webkit-transform: translateY(15px) translateX(33px);
   transform: translateY(15px) translateX(33px);
-  border: 5px solid #2196f3;
-  background-color: #101216;
+  border: 5px solid var(--accentColor);
+  background-color: var(--primaryBg);
 }
 
 .settName, .settNameSmall {
-  font-family: product-sans;
+  font-family: var(--subFont);
   font-size: 23px;
-  color: #dfdfdf;
+  color: var(--c_white);
   margin-top: 1.5rem !important;
   margin-bottom: 1.2rem !important;
 }
 
 .settName span, .settNameSmall span {
-  color: #2196f3 !important;
+  color: var(--accentColor) !important;
 }
 
 .settName span b, .settNameSmall span b {
-  color: #2A2F3A !important;
+  color: var(--subBgM) !important;
 }
 
 .settName span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"], .settNameSmall span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"] {
@@ -583,15 +633,15 @@ input:checked + .slider:before, input:checked + .slider2:before {
 }
 
 .settName span {
-  font-family: product-sans;
-  color: #43B4FF !important;
+  font-family: var(--subFont);
+  color: var(--l-accentColor) !important;
 }
 
 .b {
   font-size: 25px;
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-weight: 1000;
-  color: #43B4FF !important;
+  color: var(--l-accentColor) !important;
   text-transform: uppercase;
 }
 
@@ -602,70 +652,70 @@ input:checked + .slider:before, input:checked + .slider2:before {
 
 .setHed {
   font-size: 25px;
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-weight: 1000;
-  color: #43B4FF !important;
+  color: var(--l-accentColor) !important;
   text-transform: uppercase;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .setHed span {
-  color: #dfdfdf;
+  color: var(--c_white);
 }
 
 .settingsHeader {
-  background: #101216;
+  background: var(--primaryBg);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
 
 .settingTab:hover {
-  border-bottom: 5px solid #dfdfdf;
+  border-bottom: 5px solid var(--c_white);
 }
 
 .settingTab {
   cursor: pointer;
   display: inline-block;
   padding: 10px 0 6px;
-  color: #dfdfdf;
+  color: var(--c_white);
   font-size: 20px;
-  font-family: steradian;
+  font-family: var(--mainFont);
 }
 
 .tabANew {
   /* cursor: default; */
-  border-bottom: 5px solid #43B4FF;
-  color: #43B4FF !important;
+  border-bottom: 5px solid var(--l-accentColor);
+  color: var(--l-accentColor) !important;
 }
 
 .tabANew:hover {
-  border-bottom: 5px solid #dfdfdf;
+  border-bottom: 5px solid var(--c_white);
 }
 
 .menuTabNew {
-  color: #dfdfdf;
-  font-family: steradian;
+  color: var(--c_white);
+  font-family: var(--mainFont);
   font-size: 21px;
 }
 
 .menuTabNew:hover {
-  border-color: #43B4FF;
+  border-color: var(--l-accentColor);
 }
 
 .serverHeader {
-  background: #101216;
+  background: var(--primaryBg);
 }
 
 .menuSelectorHeader {
   font-size: 25px;
-  font-family: product-sans;
-  color: #a3a3a3;
+  font-family: var(--subFont);
+  color: var(--dirty-light);
 }
 
 .menuSelectorHeader span {
   font-size: 25px;
-  font-family: product-sans;
+  font-family: var(--subFont);
 }
 
 .menuSelectorHeader .material-icons {
@@ -675,31 +725,31 @@ input:checked + .slider:before, input:checked + .slider2:before {
 }
 
 .menuSelectorHeader * {
-  color: #dfdfdf;
+  color: var(--c_white);
 }
 
 .slide {
-  border: 5px solid #2A2F3A;
+  border: 5px solid var(--subBgM);
 }
 
 .purejscarousel-btn-prev {
-  border-bottom: 8px solid #2196f3;
-  border-left: 8px solid #2196f3;
+  border-bottom: 8px solid var(--accentColor);
+  border-left: 8px solid var(--accentColor);
 }
 
 .purejscarousel-btn-prev:hover {
-  border-bottom: 8px solid #2195f369;
-  border-left: 8px solid #2195f369;
+  border-bottom: 8px solid var(--accentColorST);
+  border-left: 8px solid var(--accentColorST);
 }
 
 .purejscarousel-btn-next {
-  border-bottom: 8px solid #2196f3;
-  border-right: 8px solid #2196f3;
+  border-bottom: 8px solid var(--accentColor);
+  border-right: 8px solid var(--accentColor);
 }
 
 .purejscarousel-btn-next:hover {
-  border-bottom: 8px solid #2195f369;
-  border-right: 8px solid #2195f369;
+  border-bottom: 8px solid var(--accentColorST);
+  border-right: 8px solid var(--accentColorST);
 }
 
 .hostMapImg {
@@ -731,34 +781,34 @@ input:checked + .slider:before, input:checked + .slider2:before {
 
 .optCheck {
   border-radius: 4px;
-  background-color: #2A2F3A;
+  background-color: var(--subBgM);
   -webkit-transition: background-color 200ms;
   transition: background-color 200ms;
 }
 
 .optName {
   text-shadow: unset;
-  color: #43B4FF;
-  font-family: steradian;
+  color: var(--l-accentColor);
+  font-family: var(--mainFont);
   font-size: 18px;
   letter-spacing: .04rem;
   text-align: center;
 }
 
 input:checked + .optCheck {
-  background-color: #2195f369;
+  background-color: var(--accentColorST);
 }
 
 input:checked + .optName {
-  color: #101216;
+  color: var(--primaryBg);
 }
 
 input:hover + .optCheck {
-  background-color: #2195f369;
+  background-color: var(--accentColorST);
 }
 
 input:hover + .optName:hover {
-  color: #101216;
+  color: var(--primaryBg);
 }
 
 input[type=color] {
@@ -766,10 +816,10 @@ input[type=color] {
 }
 
 #settSearch, #serverSearch, .formInput, #passCode, #customSnameTeam1, #customSnameTeam2 {
-  font-family: steradian;
+  font-family: var(--mainFont);
   background-color: transparent;
-  background: #2A2F3A !important;
-  color: #2196f3;
+  background: var(--subBgM) !important;
+  color: var(--accentColor);
   font-size: 18px;
 }
 
@@ -797,8 +847,8 @@ input[type=color] {
 
 #hideFull span {
   font-size: 25px;
-  font-family: steradian;
-  color: #2196f3;
+  font-family: var(--mainFont);
+  color: var(--accentColor);
 }
 
 #hideFull .switch2 {
@@ -808,23 +858,23 @@ input[type=color] {
 
 .menuSelector {
   font-size: 20px;
-  font-family: steradian;
-  color: #dfdfdf;
+  font-family: var(--mainFont);
+  color: var(--c_white);
 }
 
 .menuSelector * {
   font-size: 20px;
-  font-family: steradian;
-  color: #a3a3a3;
+  font-family: var(--mainFont);
+  color: var(--dirty-light);
 }
 
 .menuSelector:hover {
-  background: #2A2F3A;
+  background: var(--subBgM);
 }
 
 .quickJoin {
-  color: #2196f3 !important;
-  background-color: #2A2F3A;
+  color: var(--accentColor) !important;
+  background-color: var(--subBgM);
   padding-right: 4px;
   padding-left: 4px;
   -webkit-transition: color 280ms, background-color 280ms;
@@ -832,40 +882,40 @@ input[type=color] {
 }
 
 .quickJoin:hover {
-  color: #2A2F3A !important;
-  background-color: #2196f3;
+  color: var(--subBgM) !important;
+  background-color: var(--accentColor);
 }
 
 #modDropper {
-  border: 4px solid #a3a3a3;
+  border: 4px solid var(--dirty-light);
 }
 
 #modLInfo {
-  color: #2196f3 !important;
-  font-family: product-sans;
+  color: var(--accentColor) !important;
+  font-family: var(--subFont);
   font-size: 25px;
 }
 
 .button.lgn {
   font-size: 18px;
-  font-family: product-sans;
+  font-family: var(--subFont);
   text-shadow: none;
-  color: #43B4FF;
+  color: var(--l-accentColor);
   font-size: 23px;
   border-radius: 0px;
   border: 2px solid transparent;
-  background-color: #2A2F3A;
-  background: #2A2F3A;
-  -webkit-box-shadow: inset 0 -7px 0 0 #43B4FF;
-          box-shadow: inset 0 -7px 0 0 #43B4FF;
+  background-color: var(--subBgM);
+  background: var(--subBgM);
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--l-accentColor);
+          box-shadow: inset 0 -7px 0 0 var(--l-accentColor);
 }
 
 .premiumSkinCol {
-  color: #43B4FF !important;
+  color: var(--l-accentColor) !important;
 }
 
 .skinColorItem {
-  border: 3px solid #2A2F3A;
+  border: 3px solid var(--subBgM);
 }
 
 #customSnameTeam1, #customSnameTeam2 {
@@ -879,8 +929,8 @@ input[type=color] {
 .settingsBtn,
 .searchBtn,
 .subPassChg {
-  background: #2A2F3A !important;
-  color: #2196f3 !important;
+  background: var(--subBgM) !important;
+  color: var(--accentColor) !important;
   -webkit-transition: background 200ms, color 280ms;
   transition: background 200ms, color 280ms;
 }
@@ -891,8 +941,8 @@ input[type=color] {
 .settingsBtn:hover,
 .searchBtn:hover,
 .subPassChg:hover {
-  background: #2196f3 !important;
-  color: #2A2F3A !important;
+  background: var(--accentColor) !important;
+  color: var(--subBgM) !important;
 }
 
 .settingsBtn {
@@ -901,12 +951,12 @@ input[type=color] {
 }
 
 #requiresRestart {
-  color: #2196f3;
-  font-family: steradian;
+  color: var(--accentColor);
+  font-family: var(--mainFont);
 }
 
 #requiresRestart span {
-  font-family: steradian;
+  font-family: var(--mainFont);
 }
 
 #menuBtnHost, #menuBtnBrowser, #menuBtnRanked, #inviteButton, #menuBtnJoin {
@@ -915,7 +965,7 @@ input[type=color] {
   padding-left: 24px !important;
   padding-right: 24px !important;
   font-size: 25px !important;
-  font-family: steradian;
+  font-family: var(--mainFont);
   margin-left: 10px;
   margin-right: 10px;
   text-shadow: none !important;
@@ -928,86 +978,86 @@ input[type=color] {
   padding: 12px 18px;
   padding-top: 14px;
   margin-bottom: 6px;
-  background-color: #101216 !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 #2A2F3A !important;
-          box-shadow: inset 0 -7px 0 0 #2A2F3A !important;
+  background-color: var(--primaryBg) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
+          box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
   text-align: center;
 }
 
 #menuBtnHost {
-  color: #987bff;
+  color: var(--purple);
 }
 
 #menuBtnHost:hover {
-  color: #592bff;
-  background-color: #987bff !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 #592bff !important;
-          box-shadow: inset 0 -7px 0 0 #592bff !important;
+  color: var(--purple-dark);
+  background-color: var(--purple) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--purple-dark) !important;
+          box-shadow: inset 0 -7px 0 0 var(--purple-dark) !important;
 }
 
 #menuBtnBrowser {
-  color: #ff6cb8;
+  color: var(--orange);
 }
 
 #menuBtnBrowser:hover {
-  color: #FF0186;
-  background-color: #ff6cb8 !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 #FF0186 !important;
-          box-shadow: inset 0 -7px 0 0 #FF0186 !important;
+  color: var(--orange-dark);
+  background-color: var(--orange) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--orange-dark) !important;
+          box-shadow: inset 0 -7px 0 0 var(--orange-dark) !important;
 }
 
 #menuBtnRanked {
-  color: #8BC34A;
+  color: var(--green);
 }
 
 #menuBtnRanked:hover {
-  color: #458100;
-  background-color: #8BC34A !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 #458100 !important;
-          box-shadow: inset 0 -7px 0 0 #458100 !important;
+  color: var(--green-dark);
+  background-color: var(--green) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--green-dark) !important;
+          box-shadow: inset 0 -7px 0 0 var(--green-dark) !important;
 }
 
 #inviteButton {
-  color: #FFEB3B;
+  color: var(--yellow);
 }
 
 #inviteButton:hover {
-  color: #9b8b00;
-  background-color: #FFEB3B !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 #9b8b00 !important;
-          box-shadow: inset 0 -7px 0 0 #9b8b00 !important;
+  color: var(--yellow-dark);
+  background-color: var(--yellow) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
+          box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
 }
 
 #menuBtnJoin {
-  color: #6797ff;
+  color: var(--orange2);
 }
 
 #menuBtnJoin:hover {
-  color: #2351b4;
-  background-color: #6797ff !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 #2351b4 !important;
-          box-shadow: inset 0 -7px 0 0 #2351b4 !important;
+  color: var(--orange2-dark);
+  background-color: var(--orange2) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--orange2-dark) !important;
+          box-shadow: inset 0 -7px 0 0 var(--orange2-dark) !important;
 }
 
 #customizeButton {
-  font-family: steradian;
+  font-family: var(--mainFont);
   text-shadow: none !important;
   font-size: 30px;
-  color: #FFEB3B;
-  background: #101216;
-  -webkit-box-shadow: inset 0 -7px 0 0 #2A2F3A !important;
-          box-shadow: inset 0 -7px 0 0 #2A2F3A !important;
+  color: var(--yellow);
+  background: var(--primaryBg);
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
+          box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
 }
 
 #customizeButton:hover {
-  color: #9b8b00;
-  background: #FFEB3B;
-  -webkit-box-shadow: inset 0 -7px 0 0 #9b8b00 !important;
-          box-shadow: inset 0 -7px 0 0 #9b8b00 !important;
+  color: var(--yellow-dark);
+  background: var(--yellow);
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
+          box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
 }
 
 #spectButton span {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 25px !important;
 }
 
@@ -1030,15 +1080,15 @@ input[type=color] {
 #claimTimer {
   font-size: 20px !important;
   margin-top: 10px;
-  font-family: steradian;
+  font-family: var(--mainFont);
 }
 
 #aHolder {
-  display: none !important;
+  display: var(--showAds) !important;
 }
 
 #subLogoButtons {
-  bottom: 25px !important;
+  bottom: var(--buttomBarHeight) !important;
 }
 
 #subLogoButtons .button {
@@ -1047,33 +1097,33 @@ input[type=color] {
 
 .accountInput {
   font-size: 28px;
-  color: #2196f3;
-  font-family: steradian;
-  background: #2A2F3A;
+  color: var(--accentColor);
+  font-family: var(--mainFont);
+  background: var(--subBgM);
 }
 
 #accResp {
-  color: #757575 !important;
-  font-family: steradian;
+  color: var(--dirty) !important;
+  font-family: var(--mainFont);
 }
 
 #accResp span {
-  color: #a3a3a3 !important;
-  font-family: steradian;
+  color: var(--dirty-light) !important;
+  font-family: var(--mainFont);
 }
 
 .accountButton {
   font-size: 28px;
-  color: #2196f3 !important;
-  font-family: steradian;
-  background: #2A2F3A !important;
+  color: var(--accentColor) !important;
+  font-family: var(--mainFont);
+  background: var(--subBgM) !important;
   -webkit-transition: color 280ms, background 280ms;
   transition: color 280ms, background 280ms;
 }
 
 .accountButton:hover {
-  color: #2A2F3A !important;
-  background: #2196f3 !important;
+  color: var(--subBgM) !important;
+  background: var(--accentColor) !important;
 }
 
 .healthBarSeg {
@@ -1118,38 +1168,38 @@ input[type=color] {
 }
 
 .reqWIcon {
-  color: #292E39 !important;
+  color: var(--subBg) !important;
 }
 
 .reqWLvl {
-  color: #2196f3 !important;
-  font-family: steradian;
+  color: var(--accentColor) !important;
+  font-family: var(--mainFont);
   font-size: 25px;
 }
 
 .reqWTxt {
-  color: #dfdfdf;
-  font-family: product-sans;
+  color: var(--c_white);
+  font-family: var(--subFont);
   font-size: 19px;
 }
 
 .partyUsername span {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 20px;
-  color: #dfdfdf;
+  color: var(--c_white);
 }
 
 .rankedWarning {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 25px;
-  color: #a3a3a3;
+  color: var(--dirty-light);
 }
 
 .joinQueue {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 30px;
-  color: #2196f3;
-  background: #292E39;
+  color: var(--accentColor);
+  background: var(--subBg);
   -webkit-box-shadow: unset !important;
           box-shadow: unset !important;
   text-shadow: unset !important;
@@ -1159,27 +1209,27 @@ input[type=color] {
 }
 
 .joinQueue:hover {
-  color: #292E39;
-  background: #2196f3;
+  color: var(--subBg);
+  background: var(--accentColor);
 }
 
 .mailObj {
-  background: #292E39 !important;
-  color: #dfdfdf !important;
-  font-family: product-sans;
+  background: var(--subBg) !important;
+  color: var(--c_white) !important;
+  font-family: var(--subFont);
   font-size: 20px;
 }
 
 .mailFrom, .mailDate {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 25px;
-  color: #2196f3 !important;
+  color: var(--accentColor) !important;
 }
 
 .mailText {
-  font-family: product-sans;
+  font-family: var(--subFont);
   font-size: 18px;
-  color: #dfdfdf !important;
+  color: var(--c_white) !important;
 }
 
 .iconProfile {
@@ -1303,7 +1353,7 @@ input[type=color] {
 }
 
 .spinVal span, .shopCard span {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 20px;
 }
 
@@ -1312,21 +1362,21 @@ input[type=color] {
 }
 
 .chalRight {
-  font-family: steradian;
+  font-family: var(--mainFont);
   font-size: 35px;
-  color: #2196f3;
+  color: var(--accentColor);
   text-shadow: unset;
 }
 
 .chalRight div {
-  font-family: product-sans;
+  font-family: var(--subFont);
   font-size: 22px;
-  color: #dfdfdf;
+  color: var(--c_white);
   text-shadow: unset;
 }
 
 .chalXPBar {
-  background: #292E39;
+  background: var(--subBg);
 }
 
 .chalXPBarC {
