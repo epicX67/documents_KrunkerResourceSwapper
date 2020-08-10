@@ -904,10 +904,14 @@ input[type=color] {
   font-size: 23px;
   border-radius: 0px;
   border: 2px solid transparent;
-  background-color: var(--subBgM);
-  background: var(--subBgM);
-  -webkit-box-shadow: inset 0 -7px 0 0 var(--l-accentColor);
-          box-shadow: inset 0 -7px 0 0 var(--l-accentColor);
+  background-color: var(--subBgM) !important;
+  background: var(--subBgM) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--l-accentColor) !important;
+          box-shadow: inset 0 -7px 0 0 var(--l-accentColor) !important;
+}
+
+.button.lgn span {
+  color: var(--l-accentColor) !important;
 }
 
 .premiumSkinCol {
@@ -1047,17 +1051,25 @@ input[type=color] {
   font-family: var(--mainFont);
   text-shadow: none !important;
   font-size: 30px;
-  color: var(--yellow);
-  background: var(--primaryBg);
+  color: var(--yellow) !important;
+  background: var(--primaryBg) !important;
   -webkit-box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
           box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
 }
 
+#customizeButton span {
+  color: var(--yellow) !important;
+}
+
 #customizeButton:hover {
-  color: var(--yellow-dark);
-  background: var(--yellow);
+  color: var(--yellow-dark) !important;
+  background: var(--yellow) !important;
   -webkit-box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
           box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
+}
+
+#customizeButton:hover span {
+  color: var(--yellow-dark) !important;
 }
 
 #spectButton span {
@@ -1385,6 +1397,36 @@ input[type=color] {
 
 .chalXPBarC {
   border-radius: 3px;
-  background-color: #2196f3;
+  background-color: var(--accentColor);
+}
+
+#mLevelCont {
+  position: absolute;
+  font-size: 20px;
+  font-family: var(--mainFont);
+  line-height: unset;
+  color: var(--accentColor);
+  text-align: left;
+  background-color: var(--subBg);
+  border-bottom-right-radius: unset;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 27px;
+  top: 14px;
+  text-shadow: unset;
+}
+
+.progressBar {
+  margin-top: -9px;
+  height: 5px;
+  padding: unset;
+  background: var(--subBg);
+  border-radius: 10px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 /*# sourceMappingURL=main_custom.css.map */
