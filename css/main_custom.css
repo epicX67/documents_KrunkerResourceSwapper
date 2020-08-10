@@ -928,7 +928,9 @@ input[type=color] {
 .hostToggle,
 .settingsBtn,
 .searchBtn,
-.subPassChg {
+.subPassChg,
+#loadoutSelect,
+.loadoutBtn {
   background: var(--subBgM) !important;
   color: var(--accentColor) !important;
   -webkit-transition: background 200ms, color 280ms;
@@ -940,7 +942,9 @@ input[type=color] {
 .hostToggle:hover,
 .settingsBtn:hover,
 .searchBtn:hover,
-.subPassChg:hover {
+.subPassChg:hover,
+#loadoutSelect:hover,
+.loadoutBtn:hover {
   background: var(--accentColor) !important;
   color: var(--subBgM) !important;
 }
