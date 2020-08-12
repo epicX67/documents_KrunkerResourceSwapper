@@ -1344,7 +1344,7 @@ input[type=color]{
 
 //2.7.3
 #mLevelCont {
-    position: absolute;
+    position: unset;
     font-size: 20px;
     font-family: $mainFont;
     line-height: unset;
@@ -1359,6 +1359,7 @@ input[type=color]{
     padding-right: 15px;
     height: 27px;
     top: 14px;
+    margin-left: 10px;
     text-shadow: unset;
 }
 .progressBar {
@@ -1368,4 +1369,8 @@ input[type=color]{
     background: $subBg;
     border-radius: 10px;
     transform: translateY(-2px);
+}
+
+.progressBarInner{
+    background: $accentColor;
 }

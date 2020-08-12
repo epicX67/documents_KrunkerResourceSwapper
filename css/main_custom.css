@@ -1415,7 +1415,7 @@ input[type=color] {
 }
 
 #mLevelCont {
-  position: absolute;
+  position: unset;
   font-size: 20px;
   font-family: var(--mainFont);
   line-height: unset;
@@ -1431,6 +1431,7 @@ input[type=color] {
   padding-right: 15px;
   height: 27px;
   top: 14px;
+  margin-left: 10px;
   text-shadow: unset;
 }
 
@@ -1442,5 +1443,9 @@ input[type=color] {
   border-radius: 10px;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+
+.progressBarInner {
+  background: var(--accentColor);
 }
 /*# sourceMappingURL=main_custom.css.map */
