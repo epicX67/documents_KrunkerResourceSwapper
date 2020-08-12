@@ -583,6 +583,10 @@ div > #commMap {
           transform: translateY(-1px);
 }
 
+input:checked + .slider {
+  background-color: var(--accentColor);
+}
+
 input:focus + .slider {
   -webkit-box-shadow: 0 0 1px var(--accentColor);
           box-shadow: 0 0 1px var(--accentColor);
@@ -823,9 +827,15 @@ input[type=color] {
   font-size: 18px;
 }
 
-#passCode, #rawMapData {
+#passCode {
   -webkit-transform: translateY(-9px);
           transform: translateY(-9px);
+}
+
+#rawMapData {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  height: 34px;
 }
 
 #settSearch, #serverSearch {
@@ -877,6 +887,9 @@ input[type=color] {
   background-color: var(--subBgM);
   padding-right: 4px;
   padding-left: 4px;
+  text-shadow: unset !important;
+  -webkit-transform: translateY(3px) !important;
+          transform: translateY(3px) !important;
   -webkit-transition: color 280ms, background-color 280ms;
   transition: color 280ms, background-color 280ms;
 }
@@ -884,6 +897,7 @@ input[type=color] {
 .quickJoin:hover {
   color: var(--subBgM) !important;
   background-color: var(--accentColor);
+  text-shadow: unset !important;
 }
 
 #modDropper {
