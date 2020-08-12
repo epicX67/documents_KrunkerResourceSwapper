@@ -539,7 +539,7 @@ div > #commMap{
     transform: translateY(-1px);
 }
 input:checked+.slider{
-    
+    background-color: $accentColor;
 }
 input:focus+.slider{
     box-shadow:0 0 1px $accentColor
@@ -765,8 +765,12 @@ input[type=color]{
     font-size: 18px;
 }
 
-#passCode,#rawMapData{
+#passCode{
     transform: translateY(-9px);
+}
+#rawMapData{
+    transform: translateY(-5px);
+    height: 34px;
 }
 
 #settSearch, #serverSearch{
@@ -812,12 +816,15 @@ input[type=color]{
     background-color: $subBgM;
     padding-right: 4px;
     padding-left: 4px;
+    text-shadow: unset !important;
+    transform: translateY(3px) !important;
     transition: color 280ms, background-color 280ms;
 }
 
 .quickJoin:hover{
     color: $subBgM !important;
     background-color: $accentColor;
+    text-shadow: unset !important;
 }
 
 #modDropper {
