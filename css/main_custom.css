@@ -250,10 +250,6 @@ input {
   font-size: 20px;
 }
 
-#streamContainer {
-  display: none;
-}
-
 .xpBar {
   background-color: var(--subBg);
 }
