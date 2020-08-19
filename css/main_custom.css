@@ -34,6 +34,18 @@
   }
 }
 
+a {
+  color: var(--accentColor);
+}
+
+a:active {
+  color: var(--accentColor);
+}
+
+a:visited {
+  color: var(--accentColor);
+}
+
 input::-webkit-input-placeholder {
   color: var(--dirty-light) !important;
   font-family: var(--mainFont);
@@ -186,6 +198,7 @@ input {
 }
 
 .menuItem:hover {
+  border-left: unset !important;
   background: -webkit-gradient(linear, left bottom, right top, from(var(--gradientColor1)), to(var(--gradientColor2)));
   background: linear-gradient(to right top, var(--gradientColor1), var(--gradientColor2));
   -webkit-transition: background 280ms;
@@ -355,7 +368,8 @@ input {
           transform: translateY(6px);
 }
 
-#menuWindow #skinList div[style="margin-bottom:10px;color:rgba(0,0,0,0.5);"] {
+#menuWindow #skinList div[style="margin-bottom:10px;color:rgba(0,0,0,0.5);"],
+#menuWindow #skinList div[style="margin-bottom:10px"] {
   color: var(--c_white) !important;
   font-family: var(--subFont);
   font-size: 22px;
@@ -632,6 +646,14 @@ input:checked + .slider:before, input:checked + .slider2:before {
           transform: translateY(-5px);
 }
 
+.settName a {
+  color: var(--c_white) !important;
+}
+
+.settName a[style="color:#E85656"] {
+  color: #E85656 !important;
+}
+
 .settName span {
   font-family: var(--subFont);
   color: var(--l-accentColor) !important;
@@ -662,6 +684,13 @@ input:checked + .slider:before, input:checked + .slider2:before {
 
 .setHed span {
   color: var(--c_white);
+}
+
+.setHed span span {
+  font-size: 20px;
+  font-family: var(--mainFont);
+  font-weight: 1000;
+  color: var(--c_white) !important;
 }
 
 .settingsHeader {
@@ -1443,5 +1472,42 @@ input[type=color] {
 
 .progressBarInner {
   background: var(--accentColor);
+}
+
+input:checked + .slider2 {
+  background-color: var(--accentColor);
+}
+
+#clanErr span[style="float:right;color:rgba(0,0,0,0.5)"] {
+  font-family: var(--subFont);
+  font-size: 22px;
+  color: var(--c_white) !important;
+  text-shadow: unset;
+}
+
+#clanErr span[style="float:right;color:rgba(0,0,0,0.5)"] span {
+  font-family: var(--subFont);
+  font-size: 22px;
+  color: var(--c_white) !important;
+  text-shadow: unset;
+}
+
+#clanErr .setHed {
+  font-size: 22px;
+  text-shadow: unset;
+}
+
+#clanErr .setHed span[style="float:right;color:rgba(0,0,0,0.6)"] {
+  font-family: var(--subFont);
+  font-size: 22px;
+  color: var(--c_white) !important;
+  text-shadow: unset;
+}
+
+#clanErr .setHed span[style="float:right;color:rgba(0,0,0,0.6)"] span {
+  font-family: var(--subFont);
+  font-size: 22px;
+  color: var(--c_white) !important;
+  text-shadow: unset;
 }
 /*# sourceMappingURL=main_custom.css.map */
