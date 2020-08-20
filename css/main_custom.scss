@@ -1424,3 +1424,55 @@ input:checked+.slider2 {
         }
     }
 }
+
+.settName{
+    .wepLink{
+        font-family: $mainFont;
+    }
+    .settLabel[style="color:#292929"]{
+        color: #ffffff !important;
+    }
+    .settLabel[style="color:#ed4242"]{
+        color: #ed4242 !important;
+    }
+    .settLabel[style="color:#FBC02D"]{
+        color: #FBC02D !important;
+    }
+    .settLabel[style="color:#E040FB"]{
+        color: #E040FB !important;
+    }
+    .settLabel[style="color:#2196F3"]{
+        color: #2196F3 !important;
+    }
+    .settLabel[style="color:#b2f252"]{
+        color: #b2f252 !important;
+    }
+
+
+
+    .settText[style="color:#292929"]{
+        font-family: $mainFont;
+        color: #ffffff !important;
+    }
+    .settText[style="color:#ed4242"]{
+        font-family: $mainFont;
+        color: #ed4242 !important;
+    }
+    .settText[style="color:#FBC02D"]{
+        font-family: $mainFont;
+        color: #FBC02D !important;
+    }
+    .settText[style="color:#E040FB"]{
+        font-family: $mainFont;
+        color: #E040FB !important;
+    }
+    .settText[style="color:#2196F3"]{
+        font-family: $mainFont;
+        color: #2196F3 !important;
+    }
+    .settText[style="color:#b2f252"]{
+        font-family: $mainFont;
+        color: #b2f252 !important;
+    }
+    
+}
