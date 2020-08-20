@@ -1510,4 +1510,62 @@ input:checked + .slider2 {
   color: var(--c_white) !important;
   text-shadow: unset;
 }
+
+.settName .wepLink {
+  font-family: var(--mainFont);
+}
+
+.settName .settLabel[style="color:#292929"] {
+  color: #ffffff !important;
+}
+
+.settName .settLabel[style="color:#ed4242"] {
+  color: #ed4242 !important;
+}
+
+.settName .settLabel[style="color:#FBC02D"] {
+  color: #FBC02D !important;
+}
+
+.settName .settLabel[style="color:#E040FB"] {
+  color: #E040FB !important;
+}
+
+.settName .settLabel[style="color:#2196F3"] {
+  color: #2196F3 !important;
+}
+
+.settName .settLabel[style="color:#b2f252"] {
+  color: #b2f252 !important;
+}
+
+.settName .settText[style="color:#292929"] {
+  font-family: var(--mainFont);
+  color: #ffffff !important;
+}
+
+.settName .settText[style="color:#ed4242"] {
+  font-family: var(--mainFont);
+  color: #ed4242 !important;
+}
+
+.settName .settText[style="color:#FBC02D"] {
+  font-family: var(--mainFont);
+  color: #FBC02D !important;
+}
+
+.settName .settText[style="color:#E040FB"] {
+  font-family: var(--mainFont);
+  color: #E040FB !important;
+}
+
+.settName .settText[style="color:#2196F3"] {
+  font-family: var(--mainFont);
+  color: #2196F3 !important;
+}
+
+.settName .settText[style="color:#b2f252"] {
+  font-family: var(--mainFont);
+  color: #b2f252 !important;
+}
 /*# sourceMappingURL=main_custom.css.map */
