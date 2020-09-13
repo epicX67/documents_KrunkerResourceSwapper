@@ -56,6 +56,9 @@ $buttomBarHeight: var(--buttomBarHeight);
     }
 }
 
+*{
+    color: $c_white;
+}
 
 
 
@@ -585,6 +588,37 @@ input:checked+.slider:before, input:checked+.slider2:before{
     }
     span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"]{
         transform: translateY(-5px);
+    }
+    .material-icons{
+        color: $accentColor;
+    }
+    span[style="color:#353535"]{
+        color: $accentColor !important;
+        font-family: $mainFont;
+        font-size: 23px;
+    }
+    span[style="color:#eb3437"]{
+        color: #eb3437 !important;
+        font-family: $mainFont;
+        font-size: 23px;
+    }
+    span[style="color:#FBC02D"]{
+        color: #FBC02D !important;
+        font-family: $mainFont;
+        font-size: 23px;
+    }
+    span[style="color:#349ceb"]{
+        color: #349ceb !important;
+        font-family: $mainFont;
+        font-size: 23px;
+    }
+    span[style="color:#e834eb"]{
+        color: #e834eb !important;
+        font-family: $mainFont;
+        font-size: 23px;
+    }
+    .grey{
+        color: unset !important;
     }
 }
 
@@ -1475,4 +1509,94 @@ input:checked+.slider2 {
         color: #b2f252 !important;
     }
     
+}
+
+
+.buttonD{
+    background-color: $subBg !important;
+    color: $accentColorST !important;
+    font-family: $mainFont !important;
+}
+
+#policeButton{
+    height: auto !important;
+}
+.buttonB{
+    background-color: $primaryBg !important;
+    box-shadow: inset 0 -7px 0 0 $subBgM !important;
+}
+
+.buttonB:hover{
+    background-color: $subBgM !important;
+}
+
+div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
+    background-color: transparent !important;
+}
+
+.kick{
+    font-size: 18px;
+    text-shadow: none;
+    font-family: $mainFont;
+    background-color: $subBg !important;
+    color: $orange2 !important;
+}
+.ban{
+    font-size: 18px;
+    text-shadow: none;
+    font-family: $mainFont;
+    background-color: $subBg !important;
+    color: $orange !important;
+}
+.vote{
+    font-size: 18px;
+    text-shadow: none;
+    font-family: $mainFont;
+    background-color: $subBg !important;
+    color: $purple !important;
+}
+
+#policePopC{
+    background-color: $primaryBg;
+    *{
+        color: $c_white !important;
+        font-size: 23px !important;
+        text-align: left !important;
+    }
+    div[style="font-size:30px;margin-bottom:20px"]{
+        color: $accentColor !important;
+        font-family: $mainFont !important;
+        font-size: 40px !important;
+        text-transform: uppercase;
+    }
+    *{
+        font-family: $subFont !important;
+        color: $c_white !important;
+        font-size: 23px !important;
+        text-align: left !important;
+    }
+    div[style="color:rgba(0,0,0,0.6);font-size:19px"]{
+        *{
+            font-family: $subFont !important;
+            font-size: 23px !important;
+            text-align: left !important;
+        }
+    }
+}
+.polApplc{
+    border: 0 !important;
+    background-color: $subBg !important;
+    color: $c_whiteST !important;
+}
+
+// #endTimer{
+//     font-family: $subFont !important;
+//     font-size: 50px;
+// }
+
+.leaderItem{
+    *{
+        font-family: $mainFont !important;
+        font-size: 25px;
+    }
 }
