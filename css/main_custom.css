@@ -34,6 +34,10 @@
   }
 }
 
+* {
+  color: var(--c_white);
+}
+
 a {
   color: var(--accentColor);
 }
@@ -644,6 +648,44 @@ input:checked + .slider:before, input:checked + .slider2:before {
 .settName span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"], .settNameSmall span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"] {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+.settName .material-icons, .settNameSmall .material-icons {
+  color: var(--accentColor);
+}
+
+.settName span[style="color:#353535"], .settNameSmall span[style="color:#353535"] {
+  color: var(--accentColor) !important;
+  font-family: var(--mainFont);
+  font-size: 23px;
+}
+
+.settName span[style="color:#eb3437"], .settNameSmall span[style="color:#eb3437"] {
+  color: #eb3437 !important;
+  font-family: var(--mainFont);
+  font-size: 23px;
+}
+
+.settName span[style="color:#FBC02D"], .settNameSmall span[style="color:#FBC02D"] {
+  color: #FBC02D !important;
+  font-family: var(--mainFont);
+  font-size: 23px;
+}
+
+.settName span[style="color:#349ceb"], .settNameSmall span[style="color:#349ceb"] {
+  color: #349ceb !important;
+  font-family: var(--mainFont);
+  font-size: 23px;
+}
+
+.settName span[style="color:#e834eb"], .settNameSmall span[style="color:#e834eb"] {
+  color: #e834eb !important;
+  font-family: var(--mainFont);
+  font-size: 23px;
+}
+
+.settName .grey, .settNameSmall .grey {
+  color: unset !important;
 }
 
 .settName a {
@@ -1567,5 +1609,94 @@ input:checked + .slider2 {
 .settName .settText[style="color:#b2f252"] {
   font-family: var(--mainFont);
   color: #b2f252 !important;
+}
+
+.buttonD {
+  background-color: var(--subBg) !important;
+  color: var(--accentColorST) !important;
+  font-family: var(--mainFont) !important;
+}
+
+#policeButton {
+  height: auto !important;
+}
+
+.buttonB {
+  background-color: var(--primaryBg) !important;
+  -webkit-box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
+          box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
+}
+
+.buttonB:hover {
+  background-color: var(--subBgM) !important;
+}
+
+div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
+  background-color: transparent !important;
+}
+
+.kick {
+  font-size: 18px;
+  text-shadow: none;
+  font-family: var(--mainFont);
+  background-color: var(--subBg) !important;
+  color: var(--orange2) !important;
+}
+
+.ban {
+  font-size: 18px;
+  text-shadow: none;
+  font-family: var(--mainFont);
+  background-color: var(--subBg) !important;
+  color: var(--orange) !important;
+}
+
+.vote {
+  font-size: 18px;
+  text-shadow: none;
+  font-family: var(--mainFont);
+  background-color: var(--subBg) !important;
+  color: var(--purple) !important;
+}
+
+#policePopC {
+  background-color: var(--primaryBg);
+}
+
+#policePopC * {
+  color: var(--c_white) !important;
+  font-size: 23px !important;
+  text-align: left !important;
+}
+
+#policePopC div[style="font-size:30px;margin-bottom:20px"] {
+  color: var(--accentColor) !important;
+  font-family: var(--mainFont) !important;
+  font-size: 40px !important;
+  text-transform: uppercase;
+}
+
+#policePopC * {
+  font-family: var(--subFont) !important;
+  color: var(--c_white) !important;
+  font-size: 23px !important;
+  text-align: left !important;
+}
+
+#policePopC div[style="color:rgba(0,0,0,0.6);font-size:19px"] * {
+  font-family: var(--subFont) !important;
+  font-size: 23px !important;
+  text-align: left !important;
+}
+
+.polApplc {
+  border: 0 !important;
+  background-color: var(--subBg) !important;
+  color: var(--c_whiteST) !important;
+}
+
+.leaderItem * {
+  font-family: var(--mainFont) !important;
+  font-size: 25px;
 }
 /*# sourceMappingURL=main_custom.css.map */
