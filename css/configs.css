@@ -7,29 +7,29 @@ Change these colors or fonts according to your needs*/
     --subBgST : #292e394d;
     --c_white : #dfdfdf;
     --c_whiteST : #ffffffb3;
-    --accentColor : #2196f3;
-    --accentColorST : #2195f369;
-    --l-accentColor : #43B4FF;
+    --accentColor : #39ffd4;
+    --accentColorST : #39ffd469;
+    --l-accentColor : #84a1ff;
 
     --dirty: #757575;
     --dirty-light: #a3a3a3;
 
 
-    --gradientColor1 : #54dcff;
-    --gradientColor2 : #68bbff;
-    --gradientColor3 : #ffa754;
-    --gradientColor4 : #ff7268;
+    --gradientColor1 : #ff39de;
+    --gradientColor2 : #b639ff;
+    --gradientColor3 : #39ffd4;
+    --gradientColor4 : #84a1ff;
     --gradientColor5 : #FFFFFF;
 
 
     --purple: #987bff;
     --purple-dark: #592bff;
 
-    --orange: #FF5722;
-    --orange-dark: #801e00;
+    --orange: #ff9ea2;
+    --orange-dark: #ff3943;
 
-    --orange2: #FF9800;
-    --orange2-dark: #a16100;
+    --orange2: #6797ff;
+    --orange2-dark: #2351b4;
 
     --green: #8BC34A;
     --green-dark: #458100;
