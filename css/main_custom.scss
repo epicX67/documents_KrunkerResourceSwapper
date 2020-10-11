@@ -56,6 +56,36 @@ $buttomBarHeight: var(--buttomBarHeight);
     }
 }
 
+@keyframes contraCard{
+    0% {
+        color: $c_white;
+        border-color: $c_white;
+    }
+    50% {
+        color: $accentColor;
+        border-color: $accentColor;
+    }
+    100% {
+        color: $c_white;
+        border-color: $c_white;
+    }
+}
+
+@keyframes contraText{
+    0% {
+        color: $c_white;
+        border-color: $c_white;
+    }
+    50% {
+        color: $accentColor;
+        border-color: $accentColor;
+    }
+    100% {
+        color: $c_white;
+        border-color: $c_white;
+    }
+}
+
 *{
     color: $c_white;
 }
@@ -186,7 +216,7 @@ input{
     background: $primaryBg;
     transition: background 280ms;
     .menuItemIcon{
-        height: 30%;
+        height: 30px;
     }
 }
 
@@ -1062,26 +1092,8 @@ input[type=color]{
     box-shadow: inset 0 -7px 0 0 $orange2-dark !important;
 }
 
-#customizeButton {
-    font-family: $mainFont;
-    text-shadow: none !important;
-    font-size: 30px;
-    color: $yellow !important;
-    background: $primaryBg !important;
-    box-shadow: inset 0 -7px 0 0 $subBgM !important;
-    span{
-        color: $yellow !important;
-    }
-}
 
-#customizeButton:hover{
-    color: $yellow-dark !important;
-    background: $yellow !important;
-    box-shadow: inset 0 -7px 0 0 $yellow-dark !important;
-    span{
-        color: $yellow-dark !important;
-    }
-}
+
 
 
 //@extend
@@ -1464,7 +1476,7 @@ input:checked+.slider2 {
         font-family: $mainFont;
     }
     .settLabel[style="color:#292929"]{
-        color: #ffffff !important;
+        animation: contra 500ms infinite;
     }
     .settLabel[style="color:#ed4242"]{
         color: #ed4242 !important;
@@ -1486,7 +1498,7 @@ input:checked+.slider2 {
 
     .settText[style="color:#292929"]{
         font-family: $mainFont;
-        color: #ffffff !important;
+        animation: contraCard 500ms infinite;
     }
     .settText[style="color:#ed4242"]{
         font-family: $mainFont;
@@ -1599,4 +1611,492 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
         font-family: $mainFont !important;
         font-size: 25px;
     }
+}
+
+
+#menuClassContainer{
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    top: unset;
+    right: -45px;
+    background-color: $primaryBg;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-evenly;
+    #bubbleContainer{
+        display: none;
+    }
+    #classPreviewCanvas{
+        position: absolute;
+        top: -150.3%;
+        left: -6%;
+        z-index: -1;
+    }
+    #menuClassNameTag{
+        margin-top: unset;
+        position: unset;
+        text-shadow: unset;
+        font-family: $mainFont;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        .menuClassLevelBox{
+            padding: unset;
+            margin-right: 20px;
+            font-size: unset;
+            vertical-align: middle;
+            text-shadow: unset;
+            background: transparent;
+            font-family: $mainFont;
+        }
+        .menuClassPlayerName{
+            text-shadow: unset;
+            font-family: $mainFont;
+        }
+        .menuClassPlayerClan{
+            text-shadow: unset;
+            font-family: $mainFont;
+        }
+    }
+    #menuClassSubtext{
+        margin-bottom: unset;
+        position: unset;
+        text-shadow: unset;
+        font-family: $mainFont;
+
+        span{
+            margin-bottom: unset;
+            position: unset;
+            text-shadow: unset;
+            font-family: $mainFont;
+            font-size: 2rem;
+        }
+        span[style="color:#292929"]{
+            animation: contraCard 500ms infinite;
+        }
+    }
+    #menuClassName{
+        margin-bottom: unset;
+        position: unset;
+        text-shadow: unset;
+        font-family: $mainFont;
+        display: none;
+    }
+    div{
+        #policeButton{
+            margin: unset;
+            color: unset;
+            border: none;
+            display: block;
+            background-color: transparent !important;
+            box-shadow: unset !important;
+        }
+        #customizeButton{
+            box-shadow: unset !important;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 7%;
+            transition: color 280ms;
+            color: $c_white;
+            background: transparent !important;
+            text-shadow: none !important;
+            font-size: 30px;
+            font-family: $mainFont;
+            span{
+                color: $c_white;
+                font-family: 'Material Icons';
+                transition: color 280ms;
+            }
+        }
+
+        #customizeButton:hover{
+            color: $yellow;
+            transform: unset;
+            span{
+                color: $yellow !important;
+            }
+        }
+    }
+}
+
+.slidecontainer{
+    transform: translateY(-6px);
+}
+
+#menuWindow{
+    font-family: $mainFont;
+    text-shadow: unset;
+    color: $accentColorST !important;
+    .div[style="color:rgba(0,0,0,0.6);margin-bottom:20px"]{
+        font-family: $subFont;
+        text-shadow: unset;
+        color: $c_white !important;
+    }
+}
+
+
+.skinList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    .classCard{
+        width: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: $mainFont;
+        text-shadow: unset;
+        height: 100px;
+        transition: color 280ms 300ms;
+
+        .classWeap{
+            font-family: $mainFont;
+            text-shadow: unset;
+            transition: opacity 280ms;
+        }
+        .classImgC{
+            position: absolute;
+            margin-top: unset;
+            width: 100px;
+            margin: unset;
+            right: 0;
+            border-radius: 0;
+            z-index: 12222 !important;
+            transition: transform 500ms ease-in-out;
+        }
+        .classXPBar{
+            BOX-SHADOW: unset;
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            border-radius: 0;
+            background-color: $primaryBg;
+            transition: opacity 280ms;
+            .clsXPBarC{
+                background-color: $accentColor;
+                margin: unset;
+                height: 100%;
+            }
+        }
+        .classLvl{
+            font-family: $mainFont;
+            text-shadow: unset;
+            position: absolute;
+            top: unset;
+            bottom: 10%;
+            font-size: 20px;
+            transition: opacity 280ms ease 0s;
+            width: 100%;
+            text-align: left;
+            left: 10px;
+        }
+        .classHP{
+            font-family: $mainFont;
+            text-shadow: unset;
+            color: $c_white;
+            position: absolute;
+            top: unset;
+            left: 13px;
+            font-size: 20px;
+            bottom: 30%;
+            right: -25%;
+            transform: rotate(-90deg);
+            transition: opacity 280ms;
+            span{
+                font-family: $mainFont;
+                text-shadow: unset;
+                color: $accentColor;
+            }
+        }
+    }
+    .classCard:hover{
+        color: transparent;
+        .classWeap{
+            opacity: 0%;
+        }
+        .classImgC{
+            transform: translateX(-115px) scale(2) translateY(10px);
+
+        }
+        .classXPBar{
+            opacity: 0%;
+        }
+        .classLvl{
+            opacity: 0%;
+        }
+        .classHP{
+            opacity: 0%;
+        }
+    }
+}
+
+
+#skinList {
+    margin-top: 8px;
+    margin-bottom: -4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    .skinCard {
+        text-align: unset;
+        margin-bottom: unset;
+        margin-left: unset;
+        margin-right: unset;
+        padding: unset;
+        padding-top: unset;
+        width: auto;
+        vertical-align: unset;
+        background-color: transparent;
+        border-radius: 0px;
+        display: block;
+        font-size: 20px;
+        position: relative;
+        z-index: 1;
+
+        border-top: 0 !important;
+        border-right: 0 !important;
+        border-left: 0 !important;
+        padding-bottom: .5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+
+        font-family: $mainFont;
+        text-shadow: unset !important;
+        height: 120px !important;
+
+        .itemOwn{
+            display: none;
+        }
+
+        .itemSea{
+            display: none;
+        }
+
+        .skinImg{
+            margin-top: unset;
+            margin-bottom: unset;
+            position: absolute;
+            height: 100%;
+            width: auto;
+            right: 40px;
+        }
+        .skinImgC{
+            position: absolute;
+            left: 25%;
+        }
+        .skinImgD{
+            position: absolute;
+            left: 65px;
+            bottom: -20px;
+        }
+        .skinRandom{
+            display: none;
+        }
+
+        .secImg{
+            position: absolute;
+            left: 60px;
+            top: 10px;
+            z-index: -1 !important;
+            width: 80px;
+            height: 80px;
+        }
+        .selctInfoBtn {
+            padding: unset;
+            padding-bottom: unset;
+            padding-top: unser;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $accentColor;
+            font-family: $mainFont;
+            font-size: 20px;
+            background: $subBgST;
+            padding-left: 12px;
+            padding-right: 12px;
+
+            transition: color 280ms, background 280ms;
+        }
+
+        .selctInfoBtn:hover {
+            color: $subBg;
+            background: $accentColor;
+        }
+
+    }
+
+    .skinCard[style="color:#292929;border:5px solid#292929"]{
+        animation: contraCard 500ms infinite;
+    }
+
+
+    .noBtnCard{
+        height: 120px;
+        width: auto;
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-radius: 0 !important;
+        border-top: 0 !important;
+
+        margin-left: unset;
+        margin-right: unset;
+        margin-bottom: unset;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        font-family: $mainFont;
+        text-shadow: unset !important;
+
+        height: 120px !important;
+
+        .sprayImg, .noBtnImgC{
+            position: absolute;
+            left: 60px;
+            top: 10px;
+            z-index: -1 !important;
+            width: 80px;
+            height: 80px;
+        }
+        .noBtnImgR{
+            position: absolute;
+            left: 95px;
+            top: 40px;
+            z-index: -1 !important;
+            width: 30px;
+            height: 30px;
+        }
+
+        .customReticle{
+            position: absolute;
+            top: 40px;
+            width: 182px;
+        }
+
+        .itemOwn{
+            display: none;
+        }
+        .skinRandom {
+            display: none;
+        }
+    }
+    .blackShad {
+        text-shadow: unset;
+    }
+
+
+}
+
+
+#mapInfo{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: $mainFont;
+}
+#termsInfo{
+    background: $primaryBg;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    .terms{
+        font-family: $mainFont;
+        font-size: 20px;
+        color: $accentColor;
+    }
+
+}
+
+.changeText {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    color: rgba(0,0,0,.5);
+    color: $c_white;
+    font-family: $subFont;
+    font-size: 22px;
+}
+
+
+#streamContainer {
+    background: $primaryBg;
+    padding: 1.5rem;
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    .streamItem{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+        .strmCat{
+            font-family: $mainFont;
+            font-size: 24px;
+            color: $accentColor;
+            margin-bottom: .2rem;
+        }
+
+        .youtube{
+            text-shadow: none;
+        }
+        .twitch{
+            text-shadow: none;
+        }
+
+        .streamName{
+            font-family: $mainFont;
+            font-size: 20px;
+            .strmLink{
+                font-family: $mainFont;
+                font-size: 18px;
+            }
+            .blackShad{
+                text-shadow: none;
+            }
+            .strmViews{
+                font-family: $subFont;
+                font-size: 18px;
+                display: none;
+            }
+            .strmIcn{
+                font-family: $mainFont;
+                font-size: 20px;
+                margin-left: 1rem;
+            }
+        }
+
+    }
+}
+
+
+
+.menuItem .menuItemIcon {
+    width: 100%;
+    height: 45%;
+    background-size: 35px;
 }
