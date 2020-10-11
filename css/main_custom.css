@@ -34,6 +34,66 @@
   }
 }
 
+@-webkit-keyframes contraCard {
+  0% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+  50% {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+  }
+  100% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+}
+
+@keyframes contraCard {
+  0% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+  50% {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+  }
+  100% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+}
+
+@-webkit-keyframes contraText {
+  0% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+  50% {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+  }
+  100% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+}
+
+@keyframes contraText {
+  0% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+  50% {
+    color: var(--accentColor);
+    border-color: var(--accentColor);
+  }
+  100% {
+    color: var(--c_white);
+    border-color: var(--c_white);
+  }
+}
+
 * {
   color: var(--c_white);
 }
@@ -198,7 +258,7 @@ input {
 }
 
 .menuItem .menuItemIcon {
-  height: 30%;
+  height: 30px;
 }
 
 .menuItem:hover {
@@ -1128,31 +1188,6 @@ input[type=color] {
           box-shadow: inset 0 -7px 0 0 var(--orange2-dark) !important;
 }
 
-#customizeButton {
-  font-family: var(--mainFont);
-  text-shadow: none !important;
-  font-size: 30px;
-  color: var(--yellow) !important;
-  background: var(--primaryBg) !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
-          box-shadow: inset 0 -7px 0 0 var(--subBgM) !important;
-}
-
-#customizeButton span {
-  color: var(--yellow) !important;
-}
-
-#customizeButton:hover {
-  color: var(--yellow-dark) !important;
-  background: var(--yellow) !important;
-  -webkit-box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
-          box-shadow: inset 0 -7px 0 0 var(--yellow-dark) !important;
-}
-
-#customizeButton:hover span {
-  color: var(--yellow-dark) !important;
-}
-
 #spectButton span {
   font-family: var(--mainFont);
   font-size: 25px !important;
@@ -1558,7 +1593,8 @@ input:checked + .slider2 {
 }
 
 .settName .settLabel[style="color:#292929"] {
-  color: #ffffff !important;
+  -webkit-animation: contra 500ms infinite;
+          animation: contra 500ms infinite;
 }
 
 .settName .settLabel[style="color:#ed4242"] {
@@ -1583,7 +1619,8 @@ input:checked + .slider2 {
 
 .settName .settText[style="color:#292929"] {
   font-family: var(--mainFont);
-  color: #ffffff !important;
+  -webkit-animation: contraCard 500ms infinite;
+          animation: contraCard 500ms infinite;
 }
 
 .settName .settText[style="color:#ed4242"] {
@@ -1698,5 +1735,589 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 .leaderItem * {
   font-family: var(--mainFont) !important;
   font-size: 25px;
+}
+
+#menuClassContainer {
+  height: 200px;
+  width: 500px;
+  position: absolute;
+  top: unset;
+  right: -45px;
+  background-color: var(--primaryBg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#menuClassContainer #bubbleContainer {
+  display: none;
+}
+
+#menuClassContainer #classPreviewCanvas {
+  position: absolute;
+  top: -150.3%;
+  left: -6%;
+  z-index: -1;
+}
+
+#menuClassContainer #menuClassNameTag {
+  margin-top: unset;
+  position: unset;
+  text-shadow: unset;
+  font-family: var(--mainFont);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+#menuClassContainer #menuClassNameTag .menuClassLevelBox {
+  padding: unset;
+  margin-right: 20px;
+  font-size: unset;
+  vertical-align: middle;
+  text-shadow: unset;
+  background: transparent;
+  font-family: var(--mainFont);
+}
+
+#menuClassContainer #menuClassNameTag .menuClassPlayerName {
+  text-shadow: unset;
+  font-family: var(--mainFont);
+}
+
+#menuClassContainer #menuClassNameTag .menuClassPlayerClan {
+  text-shadow: unset;
+  font-family: var(--mainFont);
+}
+
+#menuClassContainer #menuClassSubtext {
+  margin-bottom: unset;
+  position: unset;
+  text-shadow: unset;
+  font-family: var(--mainFont);
+}
+
+#menuClassContainer #menuClassSubtext span {
+  margin-bottom: unset;
+  position: unset;
+  text-shadow: unset;
+  font-family: var(--mainFont);
+  font-size: 2rem;
+}
+
+#menuClassContainer #menuClassSubtext span[style="color:#292929"] {
+  -webkit-animation: contraCard 500ms infinite;
+          animation: contraCard 500ms infinite;
+}
+
+#menuClassContainer #menuClassName {
+  margin-bottom: unset;
+  position: unset;
+  text-shadow: unset;
+  font-family: var(--mainFont);
+  display: none;
+}
+
+#menuClassContainer div #policeButton {
+  margin: unset;
+  color: unset;
+  border: none;
+  display: block;
+  background-color: transparent !important;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+}
+
+#menuClassContainer div #customizeButton {
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 7%;
+  -webkit-transition: color 280ms;
+  transition: color 280ms;
+  color: var(--c_white);
+  background: transparent !important;
+  text-shadow: none !important;
+  font-size: 30px;
+  font-family: var(--mainFont);
+}
+
+#menuClassContainer div #customizeButton span {
+  color: var(--c_white);
+  font-family: 'Material Icons';
+  -webkit-transition: color 280ms;
+  transition: color 280ms;
+}
+
+#menuClassContainer div #customizeButton:hover {
+  color: var(--yellow);
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+#menuClassContainer div #customizeButton:hover span {
+  color: var(--yellow) !important;
+}
+
+.slidecontainer {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+#menuWindow {
+  font-family: var(--mainFont);
+  text-shadow: unset;
+  color: var(--accentColorST) !important;
+}
+
+#menuWindow .div[style="color:rgba(0,0,0,0.6);margin-bottom:20px"] {
+  font-family: var(--subFont);
+  text-shadow: unset;
+  color: var(--c_white) !important;
+}
+
+.skinList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  position: relative;
+}
+
+.skinList .classCard {
+  width: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: var(--mainFont);
+  text-shadow: unset;
+  height: 100px;
+  -webkit-transition: color 280ms 300ms;
+  transition: color 280ms 300ms;
+}
+
+.skinList .classCard .classWeap {
+  font-family: var(--mainFont);
+  text-shadow: unset;
+  -webkit-transition: opacity 280ms;
+  transition: opacity 280ms;
+}
+
+.skinList .classCard .classImgC {
+  position: absolute;
+  margin-top: unset;
+  width: 100px;
+  margin: unset;
+  right: 0;
+  border-radius: 0;
+  z-index: 12222 !important;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.skinList .classCard .classXPBar {
+  BOX-SHADOW: unset;
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 0;
+  background-color: var(--primaryBg);
+  -webkit-transition: opacity 280ms;
+  transition: opacity 280ms;
+}
+
+.skinList .classCard .classXPBar .clsXPBarC {
+  background-color: var(--accentColor);
+  margin: unset;
+  height: 100%;
+}
+
+.skinList .classCard .classLvl {
+  font-family: var(--mainFont);
+  text-shadow: unset;
+  position: absolute;
+  top: unset;
+  bottom: 10%;
+  font-size: 20px;
+  -webkit-transition: opacity 280ms ease 0s;
+  transition: opacity 280ms ease 0s;
+  width: 100%;
+  text-align: left;
+  left: 10px;
+}
+
+.skinList .classCard .classHP {
+  font-family: var(--mainFont);
+  text-shadow: unset;
+  color: var(--c_white);
+  position: absolute;
+  top: unset;
+  left: 13px;
+  font-size: 20px;
+  bottom: 30%;
+  right: -25%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: opacity 280ms;
+  transition: opacity 280ms;
+}
+
+.skinList .classCard .classHP span {
+  font-family: var(--mainFont);
+  text-shadow: unset;
+  color: var(--accentColor);
+}
+
+.skinList .classCard:hover {
+  color: transparent;
+}
+
+.skinList .classCard:hover .classWeap {
+  opacity: 0%;
+}
+
+.skinList .classCard:hover .classImgC {
+  -webkit-transform: translateX(-115px) scale(2) translateY(10px);
+          transform: translateX(-115px) scale(2) translateY(10px);
+}
+
+.skinList .classCard:hover .classXPBar {
+  opacity: 0%;
+}
+
+.skinList .classCard:hover .classLvl {
+  opacity: 0%;
+}
+
+.skinList .classCard:hover .classHP {
+  opacity: 0%;
+}
+
+#skinList {
+  margin-top: 8px;
+  margin-bottom: -4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#skinList .skinCard {
+  text-align: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  margin-right: unset;
+  padding: unset;
+  padding-top: unset;
+  width: auto;
+  vertical-align: unset;
+  background-color: transparent;
+  border-radius: 0px;
+  display: block;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  padding-bottom: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: var(--mainFont);
+  text-shadow: unset !important;
+  height: 120px !important;
+}
+
+#skinList .skinCard .itemOwn {
+  display: none;
+}
+
+#skinList .skinCard .itemSea {
+  display: none;
+}
+
+#skinList .skinCard .skinImg {
+  margin-top: unset;
+  margin-bottom: unset;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  right: 40px;
+}
+
+#skinList .skinCard .skinImgC {
+  position: absolute;
+  left: 25%;
+}
+
+#skinList .skinCard .skinImgD {
+  position: absolute;
+  left: 65px;
+  bottom: -20px;
+}
+
+#skinList .skinCard .skinRandom {
+  display: none;
+}
+
+#skinList .skinCard .secImg {
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  z-index: -1 !important;
+  width: 80px;
+  height: 80px;
+}
+
+#skinList .skinCard .selctInfoBtn {
+  padding: unset;
+  padding-bottom: unset;
+  padding-top: unser;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--accentColor);
+  font-family: var(--mainFont);
+  font-size: 20px;
+  background: var(--subBgST);
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: color 280ms, background 280ms;
+  transition: color 280ms, background 280ms;
+}
+
+#skinList .skinCard .selctInfoBtn:hover {
+  color: var(--subBg);
+  background: var(--accentColor);
+}
+
+#skinList .skinCard[style="color:#292929;border:5px solid#292929"] {
+  -webkit-animation: contraCard 500ms infinite;
+          animation: contraCard 500ms infinite;
+}
+
+#skinList .noBtnCard {
+  height: 120px;
+  width: auto;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  border-top: 0 !important;
+  margin-left: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: var(--mainFont);
+  text-shadow: unset !important;
+  height: 120px !important;
+}
+
+#skinList .noBtnCard .sprayImg, #skinList .noBtnCard .noBtnImgC {
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  z-index: -1 !important;
+  width: 80px;
+  height: 80px;
+}
+
+#skinList .noBtnCard .noBtnImgR {
+  position: absolute;
+  left: 95px;
+  top: 40px;
+  z-index: -1 !important;
+  width: 30px;
+  height: 30px;
+}
+
+#skinList .noBtnCard .customReticle {
+  position: absolute;
+  top: 40px;
+  width: 182px;
+}
+
+#skinList .noBtnCard .itemOwn {
+  display: none;
+}
+
+#skinList .noBtnCard .skinRandom {
+  display: none;
+}
+
+#skinList .blackShad {
+  text-shadow: unset;
+}
+
+#mapInfo {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: var(--mainFont);
+}
+
+#termsInfo {
+  background: var(--primaryBg);
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 12px;
+}
+
+#termsInfo .terms {
+  font-family: var(--mainFont);
+  font-size: 20px;
+  color: var(--accentColor);
+}
+
+.changeText {
+  margin-top: 22px;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--c_white);
+  font-family: var(--subFont);
+  font-size: 22px;
+}
+
+#streamContainer {
+  background: var(--primaryBg);
+  padding: 1.5rem;
+  border-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#streamContainer .streamItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+#streamContainer .streamItem .strmCat {
+  font-family: var(--mainFont);
+  font-size: 24px;
+  color: var(--accentColor);
+  margin-bottom: .2rem;
+}
+
+#streamContainer .streamItem .youtube {
+  text-shadow: none;
+}
+
+#streamContainer .streamItem .twitch {
+  text-shadow: none;
+}
+
+#streamContainer .streamItem .streamName {
+  font-family: var(--mainFont);
+  font-size: 20px;
+}
+
+#streamContainer .streamItem .streamName .strmLink {
+  font-family: var(--mainFont);
+  font-size: 18px;
+}
+
+#streamContainer .streamItem .streamName .blackShad {
+  text-shadow: none;
+}
+
+#streamContainer .streamItem .streamName .strmViews {
+  font-family: var(--subFont);
+  font-size: 18px;
+  display: none;
+}
+
+#streamContainer .streamItem .streamName .strmIcn {
+  font-family: var(--mainFont);
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.menuItem .menuItemIcon {
+  width: 100%;
+  height: 45%;
+  background-size: 35px;
 }
 /*# sourceMappingURL=main_custom.css.map */
