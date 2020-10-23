@@ -2245,6 +2245,9 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   background: var(--primaryBg);
   padding: 1.5rem;
   border-radius: 0;
+  left: 125px;
+  letter-spacing: .06rem;
+  padding-bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2252,9 +2255,9 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #streamContainer .streamItem {
@@ -2319,5 +2322,214 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   width: 100%;
   height: 45%;
   background-size: 35px;
+}
+
+.carousel {
+  height: 120px;
+}
+
+.slide {
+  position: relative;
+  border: none;
+  color: unset;
+  font-size: 20px;
+  height: auto;
+  text-align: unset;
+  width: 213px;
+  -webkit-transition: all 280ms;
+  transition: all 280ms;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 120px;
+  margin-left: 10px;
+}
+
+.slide .slideImg {
+  width: 100%;
+  height: 100px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.slide .slideName {
+  position: unset;
+  top: unset;
+  left: unset;
+  font-size: 20px;
+  font-family: var(--mainFont);
+  color: var(--c_white);
+  -webkit-transform: unset;
+          transform: unset;
+  width: unset;
+  text-shadow: unset;
+  z-index: 69;
+}
+
+.slide .slidePlayers {
+  position: unset;
+  top: unset;
+  left: unset;
+  font-size: 18px;
+  font-family: var(--mainFont);
+  color: var(--accentColor);
+  -webkit-transform: unset;
+          transform: unset;
+  width: unset;
+  overflow: hidden;
+  text-shadow: unset;
+  z-index: 69;
+  -webkit-animation: contraText 500ms infinite;
+          animation: contraText 500ms infinite;
+  display: none;
+  -webkit-transition: opacity 280ms, display 280ms 200ms;
+  transition: opacity 280ms, display 280ms 200ms;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  bottom: 0;
+  left: 0;
+  background: var(--primaryBg);
+  -webkit-transition: height 280ms;
+  transition: height 280ms;
+}
+
+.slide:hover .slidePlayers {
+  display: block;
+}
+
+.slide:hover + .slide::after {
+  height: 100px;
+}
+
+.purejscarousel-btn-next {
+  height: 100%;
+  border-radius: 0px;
+  background: black;
+  z-index: 99;
+  border: none;
+  margin: 0;
+}
+
+.purejscarousel-btn-prev {
+  height: 100%;
+  border-radius: 0px;
+  background: black;
+  z-index: 99;
+  border: none;
+  margin: 0;
+}
+
+.settName .material-icons, .settNameSmall .material-icons {
+  color: var(--accentColor);
+  -webkit-transform: translateY(-10px) translateX(5px);
+          transform: translateY(-10px) translateX(5px);
+}
+
+#newsHolder {
+  background-color: var(--primaryBg);
+  width: 290px;
+  height: 370px;
+}
+
+#newsHolder .newsItem {
+  font-size: 20px;
+  letter-spacing: .06rem;
+  word-spacing: .06rem;
+  color: var(--c_white);
+  margin-bottom: 10px;
+  border-bottom: 0px;
+  padding-bottom: 0px;
+  padding: 10px;
+  font-family: var(--mainFont);
+  -webkit-transition: background 280ms;
+  transition: background 280ms;
+}
+
+#newsHolder .newsItem:hover {
+  background: var(--subBg);
+}
+
+#newsHolder::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+}
+
+.mapActionB .material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+#modVote {
+  font-size: 24px;
+  font-family: var(--mainFont);
+  margin-bottom: 10px;
+}
+
+#modVoteHold {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+#modVoteHold #modVoteD {
+  color: var(--accentColor) !important;
+  background-color: transparent !important;
+}
+
+#modVoteHold #modVoteU {
+  color: var(--l-accentColor) !important;
+  background-color: transparent !important;
+}
+
+#spectButton {
+  top: calc(50% - -50px) !important;
+  padding: .5rem;
+  background: var(--purple);
+  border-radius: 60px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff39de), color-stop(#b639ff), color-stop(#39ffd4), to(#84a1ff));
+  background-image: linear-gradient(to left, #ff39de, #b639ff, #39ffd4, #84a1ff);
+  background-size: 450%;
+  -webkit-animation: 10s linear 0s infinite normal none running anima;
+          animation: 10s linear 0s infinite normal none running anima;
+}
+
+#spectButton span {
+  color: var(--primaryBg) !important;
+}
+
+#spectButton .switchsml {
+  margin-left: 1rem;
+}
+
+#spectButton .sliderSml {
+  background: var(--c_whiteST);
+}
+
+#spectButton input:checked + .sliderSml:before {
+  background: var(--primaryBg);
+}
+
+#spectButton .sliderSml::before {
+  background: var(--subBgST);
 }
 /*# sourceMappingURL=main_custom.css.map */

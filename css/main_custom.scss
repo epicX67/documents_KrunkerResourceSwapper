@@ -2042,10 +2042,13 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
     background: $primaryBg;
     padding: 1.5rem;
     border-radius: 0;
+    left: 125px;
+    letter-spacing: .06rem;
+    padding-bottom: 0px;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
 
 
     .streamItem{
@@ -2099,4 +2102,192 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
     width: 100%;
     height: 45%;
     background-size: 35px;
+}
+
+
+
+//Server slider
+
+.carousel {
+    height: 120px;
+}
+
+.slide {
+    position: relative;
+    border: none;
+    color: unset;
+    font-size: 20px;
+    height: auto;
+    text-align: unset;
+    width: 213px;
+    transition: all 280ms;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 120px;
+    margin-left: 10px;
+
+    .slideImg {
+        width: 100%;
+        height: 100px;
+        transition: all .2s;
+        border-radius: 0px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    .slideName {
+        position: unset;
+        top: unset;
+        left: unset;
+        font-size: 20px;
+        font-family: $mainFont;
+        color: $c_white;
+        transform: unset;
+        width: unset;
+        text-shadow: unset;
+        z-index: 69;
+    }
+    .slidePlayers {
+        position: unset;
+        top: unset;
+        left: unset;
+        font-size: 18px;
+        font-family: $mainFont;
+        color: $accentColor;
+        transform: unset;
+        width: unset;
+        overflow: hidden;
+        text-shadow: unset;
+        z-index: 69;
+        animation: contraText 500ms infinite;
+        display: none;
+        transition: opacity 280ms, display 280ms 200ms;
+    }
+}
+.slide::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    bottom: 0;
+    left: 0;
+    background: $primaryBg;
+    transition: height 280ms;
+}
+
+.slide:hover{
+    .slidePlayers {
+        display: block;
+    }
+}
+.slide:hover + .slide::after{
+    height: 100px;
+}
+
+.purejscarousel-btn-next {
+    height: 100%;
+    border-radius: 0px;
+    background: black;
+    z-index: 99;
+    border: none;
+    margin: 0;
+}
+
+.purejscarousel-btn-prev {
+    height: 100%;
+    border-radius: 0px;
+    background: black;
+    z-index: 99;
+    border: none;
+    margin: 0;
+}
+
+
+
+.settName .material-icons, .settNameSmall .material-icons {
+    color: var(--accentColor);
+    transform: translateY(-10px) translateX(5px);
+}
+
+
+#newsHolder{
+    background-color: $primaryBg;
+    width: 290px;
+    height: 370px;
+    .newsItem {
+        font-size: 20px;
+        letter-spacing: .06rem;
+        word-spacing: .06rem;
+        color: $c_white;
+        margin-bottom: 10px;
+        border-bottom: 0px;
+        padding-bottom: 0px;
+        padding: 10px;
+        font-family: var(--mainFont);
+        transition: background 280ms;
+    }
+    .newsItem:hover{
+        background: $subBg;
+    }
+}
+#newsHolder::-webkit-scrollbar{
+    background: transparent;
+    width: 0px;
+}
+
+
+.mapActionB{
+    .material-icons{
+        font-family: 'Material Icons' !important;
+    }
+}
+#modVote{
+    font-size: 24px;
+    font-family: var(--mainFont);
+    margin-bottom: 10px;
+}
+#modVoteHold {
+    display: inline-block;
+    margin-right: 1rem;
+
+    #modVoteD{
+        color: $accentColor !important;
+        background-color: transparent !important;
+    }
+
+    #modVoteU{
+        color: $l-accentColor !important;
+        background-color: transparent !important;
+    }
+}
+
+#spectButton {
+    top: calc(50% - -50px) !important;
+    padding: .5rem;
+    background: var(--purple);
+    border-radius: 60px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-image: linear-gradient(to left, $gradientColor1, $gradientColor2, $gradientColor3, $gradientColor4);
+    background-size: 450%;
+    animation: 8s linear 0s infinite normal none running anima;
+    span{
+        color: $primaryBg !important;
+    }
+    .switchsml {
+        margin-left: 1rem;
+    }
+    .sliderSml{
+        background: $c_whiteST;
+    }
+    input:checked+.sliderSml:before {
+        background: $primaryBg;
+    }
+    .sliderSml::before{
+        background: $subBgST;
+    }
 }
