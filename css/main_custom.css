@@ -1283,18 +1283,6 @@ input[type=color] {
           transform: scaleX(1.05);
 }
 
-.healthBarSeg:first-child .hpBSeg {
-  border-radius: unset;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.healthBarSeg:last-child .hpBSeg {
-  border-radius: unset;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
 #endAHolder {
   display: none;
 }
@@ -2396,7 +2384,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   z-index: 69;
   -webkit-animation: contraText 500ms infinite;
           animation: contraText 500ms infinite;
-  display: none;
   -webkit-transition: opacity 280ms, display 280ms 200ms;
   transition: opacity 280ms, display 280ms 200ms;
 }
@@ -2415,10 +2402,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 
 .slide:hover .slidePlayers {
   display: block;
-}
-
-.slide:hover + .slide::after {
-  height: 100px;
 }
 
 .purejscarousel-btn-next {
@@ -2506,11 +2489,11 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   border-radius: 60px;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-image: -webkit-gradient(linear, right top, left top, from(#ff39de), color-stop(#b639ff), color-stop(#39ffd4), to(#84a1ff));
-  background-image: linear-gradient(to left, #ff39de, #b639ff, #39ffd4, #84a1ff);
+  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradientColor1)), color-stop(var(--gradientColor2)), color-stop(var(--gradientColor3)), to(var(--gradientColor4)));
+  background-image: linear-gradient(to left, var(--gradientColor1), var(--gradientColor2), var(--gradientColor3), var(--gradientColor4));
   background-size: 450%;
-  -webkit-animation: 10s linear 0s infinite normal none running anima;
-          animation: 10s linear 0s infinite normal none running anima;
+  -webkit-animation: 8s linear 0s infinite normal none running anima;
+          animation: 8s linear 0s infinite normal none running anima;
 }
 
 #spectButton span {
@@ -2531,5 +2514,213 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 
 #spectButton .sliderSml::before {
   background: var(--subBgST);
+}
+
+#bottomLeftHolder {
+  background: var(--subBgST);
+  width: 304px;
+  border-radius: 7px;
+}
+
+#bottomLeftHolder div[style="display:inline-block;vertical-align:bottom"] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  vertical-align: unset !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: auto;
+  width: 100%;
+  position: absolute !important;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#bottomLeftHolder #hudClassIcon {
+  width: 80px;
+  height: auto;
+  border-radius: 0;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+#bottomLeftHolder #healthValueHolder {
+  right: 0;
+  display: block;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  padding-right: 20px;
+  position: absolute;
+  bottom: 0;
+  letter-spacing: .1rem;
+}
+
+#bottomLeftHolder #healthValueHolder #healthValue {
+  font-family: var(--mainFont);
+  font-size: 40px;
+  color: var(--c_white);
+}
+
+#bottomLeftHolder #healthValueHolder #healthValue span {
+  font-family: var(--mainFont);
+  font-size: 28px;
+  color: var(--c_whiteST);
+}
+
+#bottomLeftHolder #healthValueHolder #challIcon {
+  display: none;
+}
+
+#healthBar {
+  position: relative;
+  z-index: 69;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 99%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transform: translateX(-1px);
+          transform: translateX(-1px);
+}
+
+#healthBar .healthBarSeg {
+  width: 100%;
+  -webkit-transform: unset;
+          transform: unset;
+  -webkit-transition: all 280ms;
+  transition: all 280ms;
+}
+
+#teamName {
+  display: none;
+}
+
+.leaderItem .material-icons {
+  font-family: 'Material Icons';
+}
+
+#botRightHider #weapDisplay {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 300px;
+  height: auto;
+  -webkit-transform: translate(5px, 70px);
+          transform: translate(5px, 70px);
+  z-index: 699;
+}
+
+#botRightHider #weapDisplay .weapItem {
+  width: auto;
+  height: 100%;
+  -webkit-transition: opacity 280ms;
+  transition: opacity 280ms;
+}
+
+#botRightHider #weapDisplay .weapItem image {
+  -webkit-transition: all 280ms;
+  transition: all 280ms;
+}
+
+#botRightHider #weapDisplay .weapItem .weapIcon {
+  width: 70px;
+  height: auto;
+  -webkit-transition: all 280ms;
+  transition: all 280ms;
+}
+
+#botRightHider #weapDisplay .weapItem .weapKey {
+  display: none;
+}
+
+#botRightHider #weapDisplay #weapItem_0 .weapIcon[style="opacity: 1;"],
+#botRightHider #weapDisplay #weapItem_0 .weapIcon[style="opacity:1"] {
+  -webkit-filter: contrast(3.5);
+          filter: contrast(3.5);
+  -webkit-transform: translate(30px, -50px) scale(1.6);
+          transform: translate(30px, -50px) scale(1.6);
+}
+
+#botRightHider #weapDisplay #weapItem_1 .weapIcon[style="opacity: 1; margin-right: 25px;"] {
+  -webkit-filter: contrast(3.5);
+          filter: contrast(3.5);
+  -webkit-transform: translate(-50px, -40px) scale(1.5);
+          transform: translate(-50px, -40px) scale(1.5);
+}
+
+#botRightHider #weapDisplay #weapItem_2 .weapIcon[style="opacity: 1; margin-right: 25px;"] {
+  -webkit-filter: contrast(3.5);
+          filter: contrast(3.5);
+  -webkit-transform: translate(-120px, -40px) scale(1.6);
+          transform: translate(-120px, -40px) scale(1.6);
+}
+
+#bottomRight {
+  background: var(--subBgST);
+  width: 304px;
+  border-radius: 7px;
+}
+
+#bottomRight #ammoDisplay {
+  background: transparent !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#bottomRight #ammoDisplay #ammoVal {
+  font-family: var(--mainFont) !important;
+  font-size: 40px !important;
+  color: var(--c_white) !important;
+  margin-bottom: 2rem;
+}
+
+#bottomRight #ammoDisplay #ammoMax {
+  font-family: var(--mainFont) !important;
+  font-size: 28px !important;
+  color: var(--c_whiteST) !important;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+
+#bottomRight #ammoDisplay #ammoIcon {
+  display: none !important;
 }
 /*# sourceMappingURL=main_custom.css.map */
