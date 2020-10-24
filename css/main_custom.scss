@@ -1191,20 +1191,6 @@ input[type=color]{
     box-shadow: unset;
     transform: scaleX(1.05);
 }
-.healthBarSeg:first-child{
-    .hpBSeg{
-        border-radius: unset;
-        border-bottom-left-radius: 5px;
-        border-top-left-radius: 5px;
-    }
-}
-.healthBarSeg:last-child{
-    .hpBSeg{
-        border-radius: unset;
-        border-bottom-right-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-}
 
 #endAHolder{
     display: none;
@@ -2164,7 +2150,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
         text-shadow: unset;
         z-index: 69;
         animation: contraText 500ms infinite;
-        display: none;
         transition: opacity 280ms, display 280ms 200ms;
     }
 }
@@ -2183,9 +2168,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
     .slidePlayers {
         display: block;
     }
-}
-.slide:hover + .slide::after{
-    height: 100px;
 }
 
 .purejscarousel-btn-next {
@@ -2289,5 +2271,175 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
     }
     .sliderSml::before{
         background: $subBgST;
+    }
+}
+
+#bottomLeftHolder{
+    background: $subBgST;
+    width: 304px;
+    border-radius: 7px;
+    div[style="display:inline-block;vertical-align:bottom"]{
+        display: flex !important;
+        vertical-align: unset !important;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: auto;
+        width: 100%;
+        position: absolute !important;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+    }
+    #hudClassIcon {
+        width: 80px;
+        height: auto;
+        border-radius: 0;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+        background-color: transparent;
+    }
+    #healthValueHolder{
+        right: 0;
+        display: block;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        margin-bottom: 18px;
+        padding-right: 20px;
+        position: absolute;
+        bottom: 0;
+        letter-spacing: .1rem;
+        #healthValue{
+            font-family: $mainFont;
+            font-size: 40px;
+            color: $c_white;
+            span{
+                font-family: $mainFont;
+                font-size: 28px;
+                color: $c_whiteST;
+            }
+        }
+        #challIcon{
+            display: none;
+        }
+    }
+}
+
+
+
+#healthBar {
+    position: relative;
+    z-index: 69;
+    height: 10px;
+    display: flex;
+    width: 99%;
+    flex-direction: row;
+    transform: translateX(-1px);
+    .healthBarSeg {
+        width: 100%;
+        transform: unset;
+        transition: all 280ms;
+    }
+}
+#teamName{
+    display: none;
+}
+
+.leaderItem{
+    .material-icons{
+        font-family: 'Material Icons';
+    }
+}
+
+
+#botRightHider{
+    //transform: translateY(50px);
+    #weapDisplay{
+        display: flex !important;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 300px;
+        height: auto;
+        transform: translate(5px, 70px);
+        z-index: 699;
+        .weapItem{
+            width: auto;
+            height: 100%;
+            transition: opacity 280ms;
+            image{
+                transition: all 280ms;
+            }
+            .weapIcon{
+                width: 70px;
+                height: auto;
+                transition: all 280ms;
+            }
+            .weapKey{
+                display: none;
+            }
+
+        }
+
+
+        #weapItem_0{//Enabled
+            //background: red;
+            .weapIcon[style="opacity: 1;"],
+            .weapIcon[style="opacity:1"]{
+                filter: contrast(3.5);
+                transform: translate(30px, -50px) scale(1.6);
+            }
+        }
+
+        #weapItem_1{//Disabled
+            //background: blue;
+            .weapIcon[style="opacity: 1; margin-right: 25px;"]{
+                filter: contrast(3.5);
+                transform: translate(-50px, -40px) scale(1.5);
+            }
+        }
+
+        #weapItem_2{//Disabled
+            //background: green;
+            .weapIcon[style="opacity: 1; margin-right: 25px;"]{
+                filter: contrast(3.5);
+                transform: translate(-120px, -40px) scale(1.6);
+            }
+        }
+        
+    }
+}
+
+
+#bottomRight{
+    background: $subBgST;
+    width: 304px;
+    border-radius: 7px;
+    #ammoDisplay{
+        background: transparent !important;
+        display: flex !important;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        #ammoVal{
+            font-family: $mainFont !important;
+            font-size: 40px !important;
+            color: $c_white !important;
+            margin-bottom: 2rem;
+        }
+        #ammoMax{
+            font-family: $mainFont !important;
+            font-size: 28px !important;
+            color: $c_whiteST !important;
+            margin-bottom: 2rem;
+            margin-right: 3rem;
+        }
+        #ammoIcon{
+            display: none !important;
+
+        }
     }
 }
