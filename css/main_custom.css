@@ -1904,15 +1904,15 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   font-family: var(--mainFont);
   text-shadow: unset;
   height: 100px;
-  -webkit-transition: color 280ms 300ms;
-  transition: color 280ms 300ms;
+  -webkit-transition: color 280ms 200ms;
+  transition: color 280ms 200ms;
 }
 
 .skinList .classCard .classWeap {
   font-family: var(--mainFont);
   text-shadow: unset;
-  -webkit-transition: opacity 280ms;
-  transition: opacity 280ms;
+  -webkit-transition: opacity 280ms 200ms;
+  transition: opacity 280ms 200ms;
 }
 
 .skinList .classCard .classImgC {
@@ -1923,10 +1923,10 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   right: 0;
   border-radius: 0;
   z-index: 12222 !important;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms 200ms ease-in-out;
+  transition: -webkit-transform 500ms 200ms ease-in-out;
+  transition: transform 500ms 200ms ease-in-out;
+  transition: transform 500ms 200ms ease-in-out, -webkit-transform 500ms 200ms ease-in-out;
 }
 
 .skinList .classCard .classXPBar {
@@ -1939,8 +1939,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   height: 5px;
   border-radius: 0;
   background-color: var(--primaryBg);
-  -webkit-transition: opacity 280ms;
-  transition: opacity 280ms;
+  -webkit-transition: opacity 280ms 200ms;
+  transition: opacity 280ms 200ms;
 }
 
 .skinList .classCard .classXPBar .clsXPBarC {
@@ -1956,8 +1956,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   top: unset;
   bottom: 10%;
   font-size: 20px;
-  -webkit-transition: opacity 280ms ease 0s;
-  transition: opacity 280ms ease 0s;
+  -webkit-transition: opacity 280ms 200ms ease;
+  transition: opacity 280ms 200ms ease;
   width: 100%;
   text-align: left;
   left: 10px;
@@ -1975,8 +1975,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   right: -25%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: opacity 280ms;
-  transition: opacity 280ms;
+  -webkit-transition: opacity 280ms 200ms;
+  transition: opacity 280ms 200ms;
 }
 
 .skinList .classCard .classHP span {
@@ -2076,6 +2076,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 
 #skinList .skinCard .skinImgC {
   position: absolute;
+  z-index: -122;
   left: 25%;
 }
 
@@ -2446,6 +2447,24 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   font-family: var(--mainFont);
   -webkit-transition: background 280ms;
   transition: background 280ms;
+}
+
+#newsHolder .newsItem span {
+  font-size: 20px;
+  letter-spacing: .06rem;
+  word-spacing: .06rem;
+  color: var(--accentColor) !important;
+  font-family: var(--mainFont);
+}
+
+#newsHolder .newsItem a {
+  font-size: 22px !important;
+  letter-spacing: .06rem;
+  word-spacing: .06rem;
+  color: var(--accentColor);
+  font-family: var(--mainFont);
+  -webkit-animation: contraText 500ms infinite;
+          animation: contraText 500ms infinite;
 }
 
 #newsHolder .newsItem:hover {

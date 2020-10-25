@@ -1742,12 +1742,12 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
         font-family: $mainFont;
         text-shadow: unset;
         height: 100px;
-        transition: color 280ms 300ms;
+        transition: color 280ms 200ms;
 
         .classWeap{
             font-family: $mainFont;
             text-shadow: unset;
-            transition: opacity 280ms;
+            transition: opacity 280ms 200ms;
         }
         .classImgC{
             position: absolute;
@@ -1757,7 +1757,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
             right: 0;
             border-radius: 0;
             z-index: 12222 !important;
-            transition: transform 500ms ease-in-out;
+            transition: transform 500ms 200ms ease-in-out;
         }
         .classXPBar{
             BOX-SHADOW: unset;
@@ -1769,7 +1769,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
             height: 5px;
             border-radius: 0;
             background-color: $primaryBg;
-            transition: opacity 280ms;
+            transition: opacity 280ms 200ms;
             .clsXPBarC{
                 background-color: $accentColor;
                 margin: unset;
@@ -1783,7 +1783,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
             top: unset;
             bottom: 10%;
             font-size: 20px;
-            transition: opacity 280ms ease 0s;
+            transition: opacity 280ms 200ms ease;
             width: 100%;
             text-align: left;
             left: 10px;
@@ -1799,7 +1799,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
             bottom: 30%;
             right: -25%;
             transform: rotate(-90deg);
-            transition: opacity 280ms;
+            transition: opacity 280ms 200ms;
             span{
                 font-family: $mainFont;
                 text-shadow: unset;
@@ -1885,6 +1885,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
         }
         .skinImgC{
             position: absolute;
+            z-index: -122;
             left: 25%;
         }
         .skinImgD{
@@ -2211,6 +2212,21 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
         padding: 10px;
         font-family: var(--mainFont);
         transition: background 280ms;
+        span{
+            font-size: 20px;
+            letter-spacing: .06rem;
+            word-spacing: .06rem;
+            color: $accentColor !important;
+            font-family: var(--mainFont);
+        }
+        a{
+            font-size: 22px !important;
+            letter-spacing: .06rem;
+            word-spacing: .06rem;
+            color: $accentColor;
+            font-family: var(--mainFont);
+            animation: contraText 500ms infinite;
+        }
     }
     .newsItem:hover{
         background: $subBg;
@@ -2443,3 +2459,119 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
         }
     }
 }
+
+
+
+// #killCardHolder {
+//     position:absolute;
+//     bottom:20px;
+//     text-align:unset;
+//     color:$c_white;
+//     height: 230px;
+//     width: 560px;
+//     }
+
+    
+//     #killCardMsg {
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;;
+//     display:block;
+//     text-align:unset;
+//     }
+    
+//     #killCardBy {//Pending
+//     display:inline-block;
+//     display: none;
+//     color:#fff;
+//     font-size:25px;
+//     }
+    
+//     #killCardKick {//pending
+//     font-size:17px;
+//     float:right;
+//     display:none;
+//     color:rgba(255,255,255,.7);
+//     display: none;
+//     }
+    
+//     #killCard {
+//     position:absolute;
+//     margin: 1rem;
+//     width: calc(100% - 2rem);
+//     height: calc(100% - 2rem);
+//     //display:block;
+//     background-color:$subBgST;
+//     padding:10px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     font-family: $mainFont !important;
+//     }
+    
+//     #kCProfile {
+//     display: none;
+//     float:left;
+//     width:100px;
+//     height:100px;
+//     image-rendering:crisp-edges;
+//     }
+    
+//     .kClvl {
+//     font-size:16px;
+//     color:$c_white;
+//     position: relative;
+//     text-shadow:unset;
+//     font-family: $mainFont !important;
+//     }
+    
+//     .kCFlag {//Pending
+//     position:absolute;
+//     top:79px;
+//     left:74px;
+//     display: none;
+//     }
+    
+//     .kCFlag .flag .flag-ch {
+//     left:79px!important;
+//     display: none;
+//     }
+    
+//     #kCName {
+//     float: unset;
+//     margin-left:unset;
+//     color:$c_white;
+//     font-size:24px;
+//     line-height:unset;
+//     width:100%;
+//     overflow:hidden;
+//     white-space: unset;;
+//     text-overflow:ellipsis;
+//     text-align:unset;
+//     font-family: $mainFont !important;
+//     }
+    
+//     #kCInfo {
+//     float: unset;
+//     margin-left:unset;
+//     line-height:unset;
+//     font-size:18px;
+//     font-family: $mainFont !important;
+//     }
+    
+//     #kCInfoS {
+//     position:absolute;
+//     font-size:23px;
+//     bottom:0;
+//     right:12px;
+//     font-family: $mainFont !important;
+//     }
+    
+//     #kCStat {
+//     color:$c_white;
+//     position: relative;
+//     font-size:18px;
+//     left:130px;
+//     font-family: $mainFont !important;
+//     }
