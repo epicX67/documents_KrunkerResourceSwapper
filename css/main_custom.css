@@ -10,6 +10,11 @@
   font-weight: 900;
 }
 
+@font-face {
+  font-family: customF;
+  src: url(../css/fonts/Steradian-Bold.otf);
+}
+
 @-webkit-keyframes anima {
   0% {
     background-position: 0% 100%;
@@ -2632,7 +2637,12 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 }
 
 .leaderItem .material-icons {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons' !important;
+}
+
+.leaderItem .leaderNameM {
+  -webkit-animation: rainbow 1000ms linear infinite !important;
+          animation: rainbow 1000ms linear infinite !important;
 }
 
 #botRightHider #weapDisplay {
@@ -2729,6 +2739,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   font-size: 40px !important;
   color: var(--c_white) !important;
   margin-bottom: 2rem;
+  letter-spacing: 1px !important;
 }
 
 #bottomRight #ammoDisplay #ammoMax {
@@ -2737,9 +2748,164 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   color: var(--c_whiteST) !important;
   margin-bottom: 2rem;
   margin-right: 3rem;
+  letter-spacing: 1px !important;
 }
 
 #bottomRight #ammoDisplay #ammoIcon {
   display: none !important;
+}
+
+#topLeftHolder {
+  top: 40px;
+}
+
+#topLeftHolder * {
+  font-family: var(--mainFont) !important;
+  font-size: 1.5rem;
+}
+
+#topLeftHolder .tScoreF {
+  font-family: Material Icons !important;
+}
+
+#topLeftHolder #timerDisplay {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#topLeftHolder #timerDisplay #timerIcon {
+  display: none;
+}
+
+#topLeftHolder #timerDisplay #timerVal {
+  font-size: 60px !important;
+}
+
+#topLeftHolder .debugInfo {
+  display: inline-block;
+  vertical-align: unset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transform: translate(0px, -35px);
+          transform: translate(0px, -35px);
+}
+
+#topLeftHolder .debugInfo #fpsDisplay[style="display: block;"] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: var(--mainFont) !important;
+  width: 100px;
+  margin-right: 1.5rem;
+}
+
+#topLeftHolder .debugInfo #fpsDisplay[style="display: block;"] #ingameFPS {
+  margin-right: 6px;
+}
+
+#topLeftHolder .debugInfo #pingDisplay[style="display: block;"] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100px;
+  margin-right: 1.5rem;
+}
+
+#topLeftHolder .debugInfo #pingDisplay[style="display: block;"] #pingIcon {
+  margin-left: 6px;
+  font-size: 28px;
+  font-family: Material Icons !important;
+}
+
+#topLeftHolder .debugInfo #ingressDisplay[style="display: block;"] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 280px;
+  margin-right: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#topLeftHolder .debugInfo #ingressDisplay[style="display: block;"] #ingressIcon {
+  margin-left: 6px;
+  margin-right: 2px;
+  font-size: 28px;
+  color: var(--gradientColor1) !important;
+  font-family: Material Icons !important;
+}
+
+#topLeftHolder .debugInfo #ingressDisplay[style="display: block;"] #ingressDataSize {
+  margin-left: 1rem;
+  text-align: left;
+  width: 200px;
+}
+
+#topLeftHolder .debugInfo #egressDisplay[style="display: block;"] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 280px;
+  margin-right: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#topLeftHolder .debugInfo #egressDisplay[style="display: block;"] #egressIcon {
+  margin-left: 6px;
+  margin-right: 2px;
+  font-size: 28px;
+  color: var(--gradientColor2) !important;
+  font-family: Material Icons !important;
+}
+
+#topLeftHolder .debugInfo #egressDisplay[style="display: block;"] #egressDataSize {
+  margin-left: 1rem;
+  text-align: left;
+  width: 200px;
+}
+
+#endAHolderL, #endAHolderR {
+  display: none !important;
+}
+
+#endTabbedView * {
+  font-family: var(--mainFont) !important;
+  font-size: 1.5rem;
+}
+
+#endTabbedView #endTable td a .endTableN span {
+  font-family: 'Material Icons' !important;
+}
+
+#endTabbedView #endTable td .material-icons {
+  font-family: 'Material Icons' !important;
 }
 /*# sourceMappingURL=main_custom.css.map */
