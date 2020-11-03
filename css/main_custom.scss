@@ -44,6 +44,11 @@ $buttomBarHeight: var(--buttomBarHeight);
     font-weight: 900;
 }
 
+@font-face{
+    font-family: customF;
+    src: url(../css/fonts/Steradian-Bold.otf);
+}
+
 @keyframes anima{
     0% {
         background-position: 0% 100%;
@@ -2365,7 +2370,10 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
 
 .leaderItem{
     .material-icons{
-        font-family: 'Material Icons';
+        font-family: 'Material Icons' !important;
+    }
+    .leaderNameM{
+        animation: rainbow 1000ms linear infinite !important;
     }
 }
 
@@ -2445,6 +2453,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
             font-size: 40px !important;
             color: $c_white !important;
             margin-bottom: 2rem;
+            letter-spacing: 1px !important;
         }
         #ammoMax{
             font-family: $mainFont !important;
@@ -2452,6 +2461,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
             color: $c_whiteST !important;
             margin-bottom: 2rem;
             margin-right: 3rem;
+            letter-spacing: 1px !important;
         }
         #ammoIcon{
             display: none !important;
@@ -2575,3 +2585,133 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
 //     left:130px;
 //     font-family: $mainFont !important;
 //     }
+
+
+#topLeftHolder{
+    top: 40px;
+    *{
+        font-family: $mainFont !important;
+        font-size: 1.5rem;
+    }
+
+    .tScoreF{
+        font-family: Material Icons !important;
+    }
+
+    #timerDisplay{
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        #timerIcon{
+            display: none;
+        }
+        #timerVal{
+            font-size: 60px !important;
+            //letter-spacing: 5px;
+        }
+    }
+
+    .debugInfo {
+        display: inline-block;
+        vertical-align: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        transform: translate(0px, -35px);
+        #fpsDisplay[style="display: block;"]{
+            display: flex !important;
+            flex-direction: row;
+            font-family: $mainFont !important;
+            width: 100px;
+            margin-right: 1.5rem;
+            #ingameFPS{
+                margin-right: 6px;
+            }
+        }
+
+        #pingDisplay[style="display: block;"]{
+            display: flex !important;
+            flex-direction: row;
+            width: 100px;
+            margin-right: 1.5rem;
+            #pingIcon{
+                margin-left: 6px;
+                font-size: 28px;
+                font-family: Material Icons !important;
+            }
+        }
+
+
+
+        #ingressDisplay[style="display: block;"]{
+            display: flex !important;
+            flex-direction: row;
+            width: 280px;
+            margin-right: 1.5rem;
+            align-items: center;
+            #ingressIcon{
+                margin-left: 6px;
+                margin-right: 2px;
+                font-size: 28px;
+                color: $gradientColor1 !important;
+                font-family: Material Icons !important;
+            }
+            #ingressPacketCount{
+
+            }
+
+            #ingressDataSize{
+                margin-left: 1rem;
+                text-align: left;
+                width: 200px;
+            }
+        }
+
+        #egressDisplay[style="display: block;"]{
+            display: flex !important;
+            flex-direction: row;
+            width: 280px;
+            margin-right: 1.5rem;
+            align-items: center;
+            #egressIcon{
+                margin-left: 6px;
+                margin-right: 2px;
+                font-size: 28px;
+                color: $gradientColor2 !important;
+                font-family: Material Icons !important;
+            }
+            #egressPacketCount{
+
+            }
+
+            #egressDataSize{
+                margin-left: 1rem;
+                text-align: left;
+                width: 200px;
+            }
+        }
+    }
+}
+#endAHolderL, #endAHolderR{
+    display: none !important;
+}
+#endTabbedView{
+    *{
+        font-family: $mainFont !important;
+        font-size: 1.5rem;
+    }
+    #endTable{
+        td{
+            a .endTableN{
+                span{
+                    font-family: 'Material Icons' !important;
+                }
+            }
+            .material-icons{
+                font-family: 'Material Icons' !important;
+            }
+        }
+    }
+}
