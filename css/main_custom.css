@@ -2901,6 +2901,11 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   font-size: 1.5rem;
 }
 
+#endTabbedView #endTable td .endTableN[style="color:#fff"] {
+  -webkit-animation: rainbow 1000ms linear infinite !important;
+          animation: rainbow 1000ms linear infinite !important;
+}
+
 #endTabbedView #endTable td a .endTableN span {
   font-family: 'Material Icons' !important;
 }
