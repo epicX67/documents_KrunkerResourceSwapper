@@ -2704,6 +2704,9 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"]{
     }
     #endTable{
         td{
+            .endTableN[style="color:#fff"]{
+                animation: rainbow 1000ms linear infinite !important;
+            }
             a .endTableN{
                 span{
                     font-family: 'Material Icons' !important;
