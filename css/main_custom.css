@@ -2913,4 +2913,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 #endTabbedView #endTable td .material-icons {
   font-family: 'Material Icons' !important;
 }
+
+.ot-floating-button {
+  display: none;
+}
 /*# sourceMappingURL=main_custom.css.map */
