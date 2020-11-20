@@ -354,17 +354,14 @@ input {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 9;
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradientColor1)), color-stop(var(--gradientColor2)), color-stop(var(--gradientColor3)), to(var(--gradientColor4)));
-  background-image: linear-gradient(to left, var(--gradientColor1), var(--gradientColor2), var(--gradientColor3), var(--gradientColor4));
-  background-clip: text;
-  -webkit-background-clip: text;
   font-size: 50px;
   font-family: var(--mainFont);
   word-spacing: 1rem;
   color: transparent;
   background-size: 450%;
-  -webkit-animation: anima 10s linear infinite;
-          animation: anima 10s linear infinite;
+  -webkit-animation: none;
+          animation: none;
+  color: var(--c_whiteST);
 }
 
 #instructionHolder * {
@@ -1206,8 +1203,8 @@ input[type=color] {
 #claimImg {
   margin-top: 10px;
   height: 95px;
-  animation: scaleBob 2s ease-in-out infinite alternate;
-  -webkit-animation: scaleBob 2s ease-in-out infinite alternate;
+  -webkit-animation: none;
+          animation: none;
 }
 
 #merchImg {
@@ -1586,8 +1583,7 @@ input:checked + .slider2 {
 }
 
 .settName .settLabel[style="color:#292929"] {
-  -webkit-animation: contra 500ms infinite;
-          animation: contra 500ms infinite;
+  color: var(--accentColor) !important;
 }
 
 .settName .settLabel[style="color:#ed4242"] {
@@ -1612,8 +1608,8 @@ input:checked + .slider2 {
 
 .settName .settText[style="color:#292929"] {
   font-family: var(--mainFont);
-  -webkit-animation: contraCard 500ms infinite;
-          animation: contraCard 500ms infinite;
+  color: var(--accentColor) !important;
+  border-color: var(--accentColor) !important;
 }
 
 .settName .settText[style="color:#ed4242"] {
@@ -1812,8 +1808,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 }
 
 #menuClassContainer #menuClassSubtext span[style="color:#292929"] {
-  -webkit-animation: contraCard 500ms infinite;
-          animation: contraCard 500ms infinite;
+  color: var(--accentColor) !important;
+  border-color: var(--accentColor) !important;
 }
 
 #menuClassContainer #menuClassName {
@@ -2127,8 +2123,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 }
 
 #skinList .skinCard[style="color:#292929;border:5px solid#292929"] {
-  -webkit-animation: contraCard 500ms infinite;
-          animation: contraCard 500ms infinite;
+  color: var(--accentColor) !important;
+  border-color: var(--accentColor) !important;
 }
 
 #skinList .noBtnCard {
@@ -2388,8 +2384,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   overflow: hidden;
   text-shadow: unset;
   z-index: 69;
-  -webkit-animation: contraText 500ms infinite;
-          animation: contraText 500ms infinite;
   -webkit-transition: opacity 280ms, display 280ms 200ms;
   transition: opacity 280ms, display 280ms 200ms;
 }
@@ -2468,8 +2462,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   word-spacing: .06rem;
   color: var(--accentColor);
   font-family: var(--mainFont);
-  -webkit-animation: contraText 500ms infinite;
-          animation: contraText 500ms infinite;
 }
 
 #newsHolder .newsItem:hover {
@@ -2513,11 +2505,9 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   border-radius: 60px;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradientColor1)), color-stop(var(--gradientColor2)), color-stop(var(--gradientColor3)), to(var(--gradientColor4)));
-  background-image: linear-gradient(to left, var(--gradientColor1), var(--gradientColor2), var(--gradientColor3), var(--gradientColor4));
   background-size: 450%;
-  -webkit-animation: 8s linear 0s infinite normal none running anima;
-          animation: 8s linear 0s infinite normal none running anima;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 
 #spectButton span {
@@ -2638,11 +2628,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 
 .leaderItem .material-icons {
   font-family: 'Material Icons' !important;
-}
-
-.leaderItem .leaderNameM {
-  -webkit-animation: rainbow 1000ms linear infinite !important;
-          animation: rainbow 1000ms linear infinite !important;
 }
 
 #botRightHider #weapDisplay {
@@ -2901,11 +2886,6 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
   font-size: 1.5rem;
 }
 
-#endTabbedView #endTable td .endTableN[style="color:#fff"] {
-  -webkit-animation: rainbow 1000ms linear infinite !important;
-          animation: rainbow 1000ms linear infinite !important;
-}
-
 #endTabbedView #endTable td a .endTableN span {
   font-family: 'Material Icons' !important;
 }
@@ -2916,5 +2896,200 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
 
 .ot-floating-button {
   display: none;
+}
+
+#seasonLabel {
+  display: none !important;
+}
+
+.hostMap .blackShad {
+  text-shadow: none;
+}
+
+.hostMap .hostMapYear,
+.hostMap .hostMapVersion,
+.hostMap .mapInfoT,
+.hostMap .hostMapBy {
+  display: none;
+}
+
+.hostMap .hostMapName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c_white) !important;
+  height: 90px;
+  width: 223px;
+  line-height: 28px;
+  padding-right: 0px;
+  z-index: 69;
+  pointer-events: none;
+  font-family: var(--mainFont);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  background: #00000057;
+  -webkit-transition: color 280ms;
+  transition: color 280ms;
+}
+
+.hostMap .hostMapImg {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.hostMap input:hover + .hostMapImg {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.hostMap input:checked + .hostMapImg {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+.mapActionHol .material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.shopCard {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: auto;
+  height: 130px;
+  padding: 8px;
+  background-color: #0000008e;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shopCard .spinVal {
+  height: 40px;
+  margin-top: 0px;
+  text-shadow: none;
+}
+
+#mpCat {
+  background: var(--subBgM);
+  border: none;
+  color: var(--accentColor);
+}
+
+#menuWindow div[style="color:rgba(0,0,0,0.6);margin-bottom:20px"] {
+  font-family: var(--mainFont) !important;
+  color: var(--l-accentColor) !important;
+  margin-top: 20px;
+}
+
+#menuWindow div[style="color:rgba(0,0,0,0.6);margin-bottom:20px"] .partnerItem {
+  font-family: var(--subFont) !important;
+  color: var(--c_white) !important;
+  font-size: 22px !important;
+}
+
+#menuWindow div[style="color:rgba(0,0,0,0.6);margin-bottom:20px"] .partnerItem b {
+  font-family: var(--subFont) !important;
+}
+
+.matchVote {
+  position: relative;
+  margin-bottom: 10px;
+  height: 80px;
+  width: 200px;
+  overflow: hidden;
+  margin-right: 8px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  text-shadow: none;
+}
+
+.matchVote .matchVoteMap {
+  position: absolute;
+  color: var(--c_white);
+  line-height: 28px;
+  padding-right: 0px;
+  z-index: 1;
+  pointer-events: none;
+  font-family: var(--mainFont);
+  font-size: 18px;
+  letter-spacing: 1px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 13px;
+  padding-left: 10px;
+  text-align: start;
+  background: #00000057;
+}
+
+.matchVote .matchVoteMode {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  padding-left: 10px;
+  font-size: 23px;
+  height: auto;
+  padding-right: 0px;
+  z-index: 1;
+  font-family: var(--mainFont);
+  color: var(--c_white);
+  pointer-events: none;
+}
+
+.matchVote .matchVoteTotal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 30px;
+  height: auto;
+  padding-right: 0px;
+  z-index: 1;
+  padding-left: 0px;
+  color: var(--c_white);
+  pointer-events: none;
+  padding: 10px;
+  font-family: var(--mainFont);
+  padding-left: 15px;
+  color: var(--c_white);
+  pointer-events: none;
+}
+
+.matchVote .matchVoteThumb {
+  -webkit-transform: none;
+          transform: none;
 }
 /*# sourceMappingURL=main_custom.css.map */
