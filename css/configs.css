@@ -1,50 +1,48 @@
 /*Main-Dynamic Variables
 Change these colors or fonts according to your needs*/
-:root{
-    --primaryBg: #101216;
-    --subBg : #292E39;
-    --subBgM : #2A2F3A;
-    --subBgST : #292e394d;
-    --c_white : #dfdfdf;
-    --c_whiteST : #ffffffb3;
-    --accentColor : #E6799A;
-    --accentColorST : #E6799A69;
-    --l-accentColor : #ff88ab;
+:root {
+  --primaryBg: #101216;
+  --subBg: #292e39;
+  --subBgM: #2a2f3a;
+  --subBgST: #292e394d;
+  --c_white: #dfdfdf;
+  --c_whiteST: #ffffffb3;
+  --accentColor: #e6799a;
+  --accentColorST: #e6799a69;
+  --l-accentColor: #ff88ab;
 
-    --dirty: #757575;
-    --dirty-light: #a3a3a3;
+  --dirty: #757575;
+  --dirty-light: #a3a3a3;
 
+  --gradientColor1: #b24592;
+  --gradientColor2: #e6799a;
+  --gradientColor3: #b24592;
+  --gradientColor4: #e6799a;
+  --gradientColor5: #ffffff;
 
-    --gradientColor1 : #B24592;
-    --gradientColor2 : #E6799A;
-    --gradientColor3 : #B24592;
-    --gradientColor4 : #E6799A;
-    --gradientColor5 : #FFFFFF;
+  --purple: #987bff;
+  --purple-dark: #592bff;
 
+  --orange: #e6799a;
+  --orange-dark: #ca2053;
 
-    --purple: #987bff;
-    --purple-dark: #592bff;
+  --orange2: #6797ff;
+  --orange2-dark: #2351b4;
 
-    --orange: #E6799A;
-    --orange-dark: #ca2053;
+  --green: #8bc34a;
+  --green-dark: #458100;
 
-    --orange2: #6797ff;
-    --orange2-dark: #2351b4;
+  --yellow: #ffeb3b;
+  --yellow-dark: #9b8b00;
 
-    --green: #8BC34A;
-    --green-dark: #458100;
+  /*Fonts*/
+  --mainFont: steradian;
+  --subFont: cirular;
 
-    --yellow: #FFEB3B;
-    --yellow-dark: #9b8b00;
+  /*Configs*/
+  --showAds: none;
+  --buttomBarHeight: 25px;
 
-/*Fonts*/
-    --mainFont: steradian;
-    --subFont: product-sans;
-
-/*Configs*/
-    --showAds: none;
-    --buttomBarHeight: 25px;
-
-    /*--showAds: block;
+  /*--showAds: block;
     --buttomBarHeight: 132px;*/
 }
