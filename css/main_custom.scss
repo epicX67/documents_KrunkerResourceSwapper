@@ -461,6 +461,10 @@ input {
   }
 }
 
+#menuWindow[style="overflow-y: auto; width: 810px;"] {
+  min-height: calc(160px * 4) !important;
+}
+
 #setHed_local,
 #setHed_network,
 #setHed_gameplay,
@@ -1739,6 +1743,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
     font-family: $mainFont;
     text-shadow: unset;
     height: 100px;
+    background-color: transparent !important;
     transition: color 280ms 200ms;
 
     .classWeap {
@@ -1765,7 +1770,7 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
       width: 100%;
       height: 5px;
       border-radius: 0;
-      background-color: $primaryBg;
+      background-color: transparent !important;
       transition: opacity 280ms 200ms;
       .clsXPBarC {
         background-color: $accentColor;
@@ -1793,8 +1798,8 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
       top: unset;
       left: 13px;
       font-size: 20px;
-      bottom: 30%;
-      right: -25%;
+      bottom: 27%;
+      right: -20%;
       transform: rotate(-90deg);
       transition: opacity 280ms 200ms;
       span {
@@ -2896,5 +2901,83 @@ div[style="background-color:gainsboro;border-radius:6px;padding:5px"] {
         transition: color 280ms ease;
       }
     }
+  }
+}
+
+#selectorContainer {
+  position: absolute;
+  display: inline-block;
+  width: 160px;
+  height: 100%;
+  background-color: transparent;
+  filter: unset;
+  margin: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .selectorItem {
+    all: unset;
+    display: grid;
+    place-content: center;
+    width: 160px;
+    height: 160px;
+
+    .selectorLabel {
+      all: unset;
+      display: none;
+    }
+
+    .selectorIcon {
+      all: unset;
+      pointer-events: none;
+      width: 100px;
+      height: 100px;
+    }
+    .crisp-edges {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+
+  .selectedItem {
+    background-color: $subBg !important;
+    border-radius: 0px 10px 10px 0px;
+    filter: unset !important;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}
+
+.custContainer {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: background-color 280ms ease;
+
+  &:hover {
+    background-color: $subBg !important;
+  }
+  .settLabel {
+    top: 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    font-size: 22px;
+    font-family: $mainFont;
+    letter-spacing: 2;
+  }
+
+  .settName {
+    top: 0;
+    left: 0;
+    padding: 10px;
+    padding-top: 20px;
   }
 }
